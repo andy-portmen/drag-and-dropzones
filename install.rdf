@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+ <Description about="urn:mozilla:install-manifest">
+ 
+   <em:id>dendzones@captaincaveman.nl</em:id>
+   <em:name>Drag &amp; DropZones</em:name>
+   <em:version>1.6.1.1-signed.1-let-fixed</em:version>
+   <em:description>Replace the contact menu with fancy Drag &amp; DropZones</em:description>
+   <em:creator>Martijn Kooij</em:creator>
+   <em:contributor>Andy Portmen</em:contributor>
+   <em:iconURL>chrome://dendzones/skin/dragndrop_logo_32.png</em:iconURL>
+   <em:icon64URL>chrome://dendzones/skin/dragndrop_logo_64.png</em:icon64URL>
+   <em:optionsURL>chrome://dendzones/content/settings.xul</em:optionsURL>
+   <em:homepageURL>http://add0n.com/drag-and-dropzones.html</em:homepageURL>
+   <em:type>2</em:type>
+
+   <em:contributor>Original author Martijn Kooij</em:contributor>
+   <em:contributor>Thanks to LXweb.nl for the GraphX</em:contributor>
+   <em:contributor>Thanks to babelzilla.org for the great l10n service you provide</em:contributor>
+   <em:contributor>-</em:contributor>
+   <em:contributor>milq (sv-SE)</em:contributor>
+   <em:contributor>Goofy (fr)</em:contributor>
+   <em:contributor>MatrixIsAllOver (it-IT)</em:contributor>
+   <em:contributor>drry (ja)</em:contributor>
+   <em:contributor>raryelcsouza (pt-BR)</em:contributor>
+   <em:contributor>MartinMeise (de-DE)</em:contributor>
+   <em:contributor>chuzo (es-ES)</em:contributor>
+   <em:contributor>bfaf (bg-BG)</em:contributor>
+   <em:contributor>jerz (pl)</em:contributor>
+   <em:contributor>blaz_boy (ar)</em:contributor>
+   <em:contributor>Natty Dreed (ar-SA)</em:contributor>
+   <em:contributor>carbondioxide (cs-CZ)</em:contributor>
+   <em:contributor>Kobberholm (da)</em:contributor>
+   <em:contributor>Seanan (ga-IE)</em:contributor>
+   <em:contributor>gusztinrudolf (hu-HU)</em:contributor>
+   <em:contributor>ezg (lt-LT)</em:contributor>
+   <em:contributor>promatik (pt-PT)</em:contributor>
+   <em:contributor>zajacik (sk-SK)</em:contributor>
+   <em:contributor>DakSrbija (sr)</em:contributor>
+   <em:contributor>Ersen Yoldac (tr-TR)</em:contributor>
+   <em:contributor>Sappa (uk-UA)</em:contributor>
+   <em:contributor>mdzoran (ro)</em:contributor>
+   <em:contributor>markh (nl)</em:contributor>
+
+   <!-- Firefox -->
+   <em:targetApplication>
+     <Description>
+     <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+     <em:minVersion>4.0</em:minVersion>
+     <em:maxVersion>32.0</em:maxVersion>
+     </Description>
+   </em:targetApplication>
+  
+ </Description>
+
+</RDF>

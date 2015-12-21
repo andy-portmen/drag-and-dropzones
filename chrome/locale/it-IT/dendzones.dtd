@@ -1,0 +1,20 @@
+<!ENTITY dendzones.settings.title "Impostazioni di Drag &amp; DropZones">
+<!ENTITY dendzones.settings.general "Zone di trascinamento e rilascio">
+<!ENTITY dendzones.settings.dropzones "Zone di trascinamento e rilascio">
+<!ENTITY dendzones.settings.misc "Varie">
+<!ENTITY dendzones.settings.defaultcolor "Colore delle zone di trascinamento e rilascio (fare clic per modificare):">
+<!ENTITY dendzones.toolbar.toggledend "Drag &amp; DropZones">
+<!ENTITY dendzones.toolbar.toggledend.tooltip "Attiva/disattiva le zone di trascinamento e rilascio">
+<!ENTITY dendzones.settings.searchengines "Motori di ricerca">
+<!ENTITY dendzones.settings.cmitems "Azioni di menu contestuale">
+<!ENTITY dendzones.settings.other.switchcurrentengine "Cambia il motore attuale della barra di ricerca dopo aver effettuato la ricerca">
+<!ENTITY dendzones.settings.other.dropzoneshowdelay "Numero di millisecondi dopo il quale mostrare le zone di trascinamento e rilascio:">
+<!ENTITY dendzones.settings.other.opacity "Opacità delle zone di trascinamento e rilascio (contenuto/intestazione/evidenziatura):">
+<!ENTITY dendzones.settings.other.maxaxis "Dimensioni della griglia delle zone di trascinamento e rilascio:">
+<!ENTITY dendzones.settings.other.maxaxis.auto "impostate automaticamente">
+<!ENTITY dendzones.settings.other.usefortext "Attiva le zone di trascinamento e rilascio al trascinamento di testo">
+<!ENTITY dendzones.settings.other.useforimages "Attiva le zone di trascinamento e rilascio al trascinamento di immagini">
+<!ENTITY dendzones.settings.other.useforlinks "Attiva le zone di trascinamento e rilascio al trascinamento di link">
+<!ENTITY dendzones.settings.search.openintab "Apri i risultati di ricerca in una nuova scheda">
+<!ENTITY dendzones.settings.search.activatetab "Porta in primo piano le schede dei risultati di ricerca">
+<!ENTITY dendzones.settings.other.handlecontextclick "Attiva le zone di trascinamento e rilascio con clic con tasto destro del mouse">

@@ -1,0 +1,20 @@
+<!ENTITY dendzones.settings.title "Drag &amp; DropZones - Opciones">
+<!ENTITY dendzones.settings.general "Drag &amp; DropZones">
+<!ENTITY dendzones.settings.dropzones "Configuración de las zonas">
+<!ENTITY dendzones.settings.misc "Varios">
+<!ENTITY dendzones.settings.defaultcolor "Color de zonas (pulsar en una zona para colorearla)">
+<!ENTITY dendzones.toolbar.toggledend "Drag &amp; DropZones">
+<!ENTITY dendzones.toolbar.toggledend.tooltip "Activar o desactivar Drag &amp; DropZones">
+<!ENTITY dendzones.settings.searchengines "Buscadores">
+<!ENTITY dendzones.settings.cmitems "Acciones del menú contextual">
+<!ENTITY dendzones.settings.other.switchcurrentengine "Cambiar el buscador actual después de buscar.">
+<!ENTITY dendzones.settings.other.dropzoneshowdelay "Retraso en mostrar las zonas (en ms)">
+<!ENTITY dendzones.settings.other.opacity "Valor de opacidad para las zonas (contenido/cabecera/resaltado)">
+<!ENTITY dendzones.settings.other.maxaxis "Tamaño de la rejilla">
+<!ENTITY dendzones.settings.other.maxaxis.auto "Auto">
+<!ENTITY dendzones.settings.other.usefortext "Activar al arrastrar texto">
+<!ENTITY dendzones.settings.other.useforimages "Activar al arrastrar imágenes">
+<!ENTITY dendzones.settings.other.useforlinks "Activar al arrastrar enlaces">
+<!ENTITY dendzones.settings.search.openintab "Abrir los resultados en una pestaña nueva">
+<!ENTITY dendzones.settings.search.activatetab "Activar una nueva pestaña abierta de una búsqueda">
+<!ENTITY dendzones.settings.other.handlecontextclick "Usar las zonas de arrastrar y soltar en lugar del menú contextual">

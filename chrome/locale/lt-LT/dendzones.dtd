@@ -1,0 +1,20 @@
+<!ENTITY dendzones.settings.title "Tempimo ir metimo zonų nustatymai">
+<!ENTITY dendzones.settings.general "Tempimo ir metimo zonos">
+<!ENTITY dendzones.settings.dropzones "Metimo zonų nustatymai">
+<!ENTITY dendzones.settings.misc "Miscellaneous">
+<!ENTITY dendzones.settings.defaultcolor "DropZone Color (click on a DropZone to color it)">
+<!ENTITY dendzones.toolbar.toggledend "Tempimo ir metimo zonos">
+<!ENTITY dendzones.toolbar.toggledend.tooltip "Įjungti ar išjungti tempimo ir metimo zonas">
+<!ENTITY dendzones.settings.searchengines "Paieškos varikliai">
+<!ENTITY dendzones.settings.cmitems "Kontekstinio meniu veiksmai">
+<!ENTITY dendzones.settings.other.switchcurrentengine "Pakeisti dabartinį Paieškos variklį po paieškos.">
+<!ENTITY dendzones.settings.other.dropzoneshowdelay "Užlaikymas rodant tempimo zonas(milisekundėmis)">
+<!ENTITY dendzones.settings.other.opacity "Permatomumo reikšmės tempimo zonoms (turinys, pavadinimas, pabraukimas)">
+<!ENTITY dendzones.settings.other.maxaxis "Grid size">
+<!ENTITY dendzones.settings.other.maxaxis.auto "Auto">
+<!ENTITY dendzones.settings.other.usefortext "Activate when dragging text">
+<!ENTITY dendzones.settings.other.useforimages "Activate when dragging images">
+<!ENTITY dendzones.settings.other.useforlinks "Activate when dragging links">
+<!ENTITY dendzones.settings.search.openintab "Open search results in a new tab">
+<!ENTITY dendzones.settings.search.activatetab "Activate a new tab opened from a search">
+<!ENTITY dendzones.settings.other.handlecontextclick "Use Drag &amp; DropZones instead of the context menu">

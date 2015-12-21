@@ -1,0 +1,20 @@
+<!ENTITY dendzones.settings.title "Setari Zone Drag &amp; Drop">
+<!ENTITY dendzones.settings.general "Zone Drag &amp; Drop">
+<!ENTITY dendzones.settings.dropzones "Setari Zone Drop">
+<!ENTITY dendzones.settings.misc "Diverse">
+<!ENTITY dendzones.settings.defaultcolor "Culori Zone Drop (clic pe o Zona Drop pentru a o colora)">
+<!ENTITY dendzones.toolbar.toggledend "Zone Drag &amp; Drop">
+<!ENTITY dendzones.toolbar.toggledend.tooltip "Porniti/opriti Zone Drag &amp; Drop">
+<!ENTITY dendzones.settings.searchengines "Motoare de cautare">
+<!ENTITY dendzones.settings.cmitems "Actiuni ale meniului contextual">
+<!ENTITY dendzones.settings.other.switchcurrentengine "Schimba motorul actual de cautare dupa cautare">
+<!ENTITY dendzones.settings.other.dropzoneshowdelay "Delay showing the Dropzones (in ms)">
+<!ENTITY dendzones.settings.other.opacity "Opacity values for the DropZones (content/header/highlight)">
+<!ENTITY dendzones.settings.other.maxaxis "Grid size">
+<!ENTITY dendzones.settings.other.maxaxis.auto "Auto">
+<!ENTITY dendzones.settings.other.usefortext "Activate when dragging text">
+<!ENTITY dendzones.settings.other.useforimages "Activate when dragging images">
+<!ENTITY dendzones.settings.other.useforlinks "Activate when dragging links">
+<!ENTITY dendzones.settings.search.openintab "Open search results in a new tab">
+<!ENTITY dendzones.settings.search.activatetab "Activate a new tab opened from a search">
+<!ENTITY dendzones.settings.other.handlecontextclick "Use Drag &amp; DropZones instead of the context menu">

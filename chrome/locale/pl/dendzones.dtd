@@ -1,0 +1,20 @@
+<!ENTITY dendzones.settings.title "Ustawienia Drag &amp; DropZones">
+<!ENTITY dendzones.settings.general "Drag &amp; DropZones">
+<!ENTITY dendzones.settings.dropzones "Konfiguracja Strefy Upuszczania">
+<!ENTITY dendzones.settings.misc "Różne">
+<!ENTITY dendzones.settings.defaultcolor "Kolor DropZone (kliknij na DropZone aby nadać kolor)">
+<!ENTITY dendzones.toolbar.toggledend "Drag &amp; DropZones">
+<!ENTITY dendzones.toolbar.toggledend.tooltip "Przełącz Drag &amp; DropZones pomiędzy Włączone lub Wyłączone">
+<!ENTITY dendzones.settings.searchengines "Wyszukiwarki">
+<!ENTITY dendzones.settings.cmitems "Akcje menu kontekstowego">
+<!ENTITY dendzones.settings.other.switchcurrentengine "Przełącz bieżącą wyszukiwarkę po wyszukaniu.">
+<!ENTITY dendzones.settings.other.dropzoneshowdelay "Opóźnienie wyświetlania Dropzones (w ms)">
+<!ENTITY dendzones.settings.other.opacity "Wartość przezroczystości dla DropZones (treść/nagłówek/wyróżnienie)">
+<!ENTITY dendzones.settings.other.maxaxis "Rozmiar siatki">
+<!ENTITY dendzones.settings.other.maxaxis.auto "Automatyczny">
+<!ENTITY dendzones.settings.other.usefortext "Aktywuj podczas przeciągania tekstu">
+<!ENTITY dendzones.settings.other.useforimages "Aktywuj podczas przeciągania obrazka">
+<!ENTITY dendzones.settings.other.useforlinks "Aktywuj podczas przeciągania linku">
+<!ENTITY dendzones.settings.search.openintab "Otwórz wyniki wyszukiwania w nowej zakładce">
+<!ENTITY dendzones.settings.search.activatetab "Aktywuj nową zakładkę otwartą podczas wyszukiwania">
+<!ENTITY dendzones.settings.other.handlecontextclick "Użyj Drag &amp; DropZones zamiast menu kontekstowego">

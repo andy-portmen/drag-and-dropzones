@@ -1,0 +1,30 @@
+@import url("chrome://global/skin/");
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+.tabbrowser-tab {
+  -moz-appearance: none;
+  margin: 0;
+  padding: 2px 0 4px;
+  border-width: 4px 3px 0;
+  border-style: solid;
+  border-radius: 0;
+}
+.tabbrowser-tab:hover {
+  background-image: linear-gradient(to top, rgba(10%,10%,10%,.4) 1px, transparent 1px), linear-gradient(hsla(0,0%,100%,.3) 1px, hsla(0,0%,75%,.2) 80%, hsla(0,0%,60%,.2)),
+                    linear-gradient(-moz-dialog, -moz-dialog);
+}
+.tabbrowser-tab[selected="true"] {
+  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.5) 50%),
+                    linear-gradient(-moz-dialog, -moz-dialog);
+}
+.tabbrowser-tab:-moz-lwtheme {
+  color: inherit;
+}
+.tabbrowser-tab[selected="true"]:-moz-lwtheme {
+  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.5) 50%);
+}
+.tabbrowser-tab:focus > .tab-stack {
+  outline: 1px dotted;
+}

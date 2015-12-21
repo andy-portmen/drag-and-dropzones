@@ -1,0 +1,17 @@
+pref("extensions.dendzones@captaincaveman.nl.description", "chrome://dendzones/locale/dendzones.properties");
+pref("extensions.dendzones.dropzonecolor", "#6487DC");
+pref("extensions.dendzones.dendzoneson", true);
+pref("extensions.dendzones.switchcurrentengine", true);
+pref("extensions.dendzones.usefortext", true);
+pref("extensions.dendzones.useforimages", true);
+pref("extensions.dendzones.useforlinks", true);
+pref("extensions.dendzones.dropzoneshowdelay", 100);
+pref("extensions.dendzones.contentopacity", "0.3");
+pref("extensions.dendzones.headeropacity", "0.6");
+pref("extensions.dendzones.highlightopacity", "0.9");
+pref("extensions.dendzones.search.openintab", true);
+pref("extensions.dendzones.search.activatetab", true);
+pref("extensions.dendzones.handlecontextclick", false);
+pref("extensions.dendzones.maxaxis", 0);
+pref("extensions.dendzones.activateonctrlshiftclick", true);
+pref("extensions.dendzones.version", "");

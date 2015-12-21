@@ -1,0 +1,20 @@
+<!ENTITY dendzones.settings.title "Opções do Drag &amp; DropZones">
+<!ENTITY dendzones.settings.general "Drag &amp; DropZones">
+<!ENTITY dendzones.settings.dropzones "Defenições do DropZone">
+<!ENTITY dendzones.settings.misc "Diversos">
+<!ENTITY dendzones.settings.defaultcolor "Cor da DropZone (clique numa DropZone para colori-la)">
+<!ENTITY dendzones.toolbar.toggledend "Drag &amp; DropZones">
+<!ENTITY dendzones.toolbar.toggledend.tooltip "Activar ou Desactivar o Drag &amp; DropZones">
+<!ENTITY dendzones.settings.searchengines "Mecanismos de Pesquisa">
+<!ENTITY dendzones.settings.cmitems "Acções do menu de contexto">
+<!ENTITY dendzones.settings.other.switchcurrentengine "Trocar o Mecanismo de Pesquisa actual após a procura.">
+<!ENTITY dendzones.settings.other.dropzoneshowdelay "Atraso para mostrar as DropZones (em milissegundos)">
+<!ENTITY dendzones.settings.other.opacity "Valores de transparencia para as DropZones (conteúdo/cabeçalho/destacado)">
+<!ENTITY dendzones.settings.other.maxaxis "Tamanho da rede">
+<!ENTITY dendzones.settings.other.maxaxis.auto "Auto">
+<!ENTITY dendzones.settings.other.usefortext "Activar quando arrastar texto">
+<!ENTITY dendzones.settings.other.useforimages "Activar quando arrastar imagens">
+<!ENTITY dendzones.settings.other.useforlinks "Activar quando arrastar links">
+<!ENTITY dendzones.settings.search.openintab "Abrir resultados da pesquisa em abas novas">
+<!ENTITY dendzones.settings.search.activatetab "Activar a nova aba aberta pela pesquisa">
+<!ENTITY dendzones.settings.other.handlecontextclick "Use Drag &amp; DropZones em vez do menu de contexto">

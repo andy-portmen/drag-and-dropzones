@@ -1,0 +1,20 @@
+<!ENTITY dendzones.settings.title "Настройки на Drag &amp; DropZones">
+<!ENTITY dendzones.settings.general "Drag &amp; DropZones">
+<!ENTITY dendzones.settings.dropzones "Настройки на DropZone">
+<!ENTITY dendzones.settings.misc "Miscellaneous">
+<!ENTITY dendzones.settings.defaultcolor "DropZone Color (click on a DropZone to color it)">
+<!ENTITY dendzones.toolbar.toggledend "Издърпване на &amp; DropZones">
+<!ENTITY dendzones.toolbar.toggledend.tooltip "Включване/Изключване на &amp; DropZones">
+<!ENTITY dendzones.settings.searchengines "Търсачки">
+<!ENTITY dendzones.settings.cmitems "Елементи от котекстно меню">
+<!ENTITY dendzones.settings.other.switchcurrentengine "Превключване на текущата търсачка след търсене.">
+<!ENTITY dendzones.settings.other.dropzoneshowdelay "Закъснение при показване на DropZone (в мс)">
+<!ENTITY dendzones.settings.other.opacity "Стойности на непрозрачност за DropZone (съдържание/заглавие/осветяване)">
+<!ENTITY dendzones.settings.other.maxaxis "Grid size">
+<!ENTITY dendzones.settings.other.maxaxis.auto "Auto">
+<!ENTITY dendzones.settings.other.usefortext "Activate when dragging text">
+<!ENTITY dendzones.settings.other.useforimages "Activate when dragging images">
+<!ENTITY dendzones.settings.other.useforlinks "Activate when dragging links">
+<!ENTITY dendzones.settings.search.openintab "Open search results in a new tab">
+<!ENTITY dendzones.settings.search.activatetab "Activate a new tab opened from a search">
+<!ENTITY dendzones.settings.other.handlecontextclick "Use Drag &amp; DropZones instead of the context menu">

@@ -1,0 +1,20 @@
+<!ENTITY dendzones.settings.title "Drag &amp; DropZones إعدادات">
+<!ENTITY dendzones.settings.general "Drag &amp; DropZones">
+<!ENTITY dendzones.settings.dropzones "DropZone إعداد">
+<!ENTITY dendzones.settings.misc "خيارات منوعة">
+<!ENTITY dendzones.settings.defaultcolor "DropZone لون(إضغط على منطقة إسقاط لتلوينها)">
+<!ENTITY dendzones.toolbar.toggledend "Drag &amp; DropZones">
+<!ENTITY dendzones.toolbar.toggledend.tooltip "تبديل Drag &amp; DropZones مفعل أو غير مفعل">
+<!ENTITY dendzones.settings.searchengines "محركات البحث">
+<!ENTITY dendzones.settings.cmitems "إجراءات القائمة المنسدلة">
+<!ENTITY dendzones.settings.other.switchcurrentengine "بدل محرك البحث الحالي بعد البحث.">
+<!ENTITY dendzones.settings.other.dropzoneshowdelay "تأخير عرض الـDropZones (ms)">
+<!ENTITY dendzones.settings.other.opacity "Opacity values for the DropZones (content/header/highlight)">
+<!ENTITY dendzones.settings.other.maxaxis "حجم الشبكة">
+<!ENTITY dendzones.settings.other.maxaxis.auto "آلي">
+<!ENTITY dendzones.settings.other.usefortext "تنشيط عند سحب نص">
+<!ENTITY dendzones.settings.other.useforimages "تنشيط عند سحب صور">
+<!ENTITY dendzones.settings.other.useforlinks "تنشيط عند سحب روابط">
+<!ENTITY dendzones.settings.search.openintab "فتح نتائج البحث في تبويب جديد">
+<!ENTITY dendzones.settings.search.activatetab "تنشيط تبويب جديد من البحث">
+<!ENTITY dendzones.settings.other.handlecontextclick "إستخدم Drag &amp; DropZones بدلة من القائمة المنسدلة">

@@ -1,0 +1,20 @@
+<!ENTITY dendzones.settings.title "Drag &amp; DropZones instellingen">
+<!ENTITY dendzones.settings.general "Drag &amp; DropZones">
+<!ENTITY dendzones.settings.dropzones "DropZone instellen">
+<!ENTITY dendzones.settings.misc "Diversen">
+<!ENTITY dendzones.settings.defaultcolor "DropZone-kleur (klik op een DropZone om deze te kleuren)">
+<!ENTITY dendzones.toolbar.toggledend "Drag &amp; DropZones">
+<!ENTITY dendzones.toolbar.toggledend.tooltip "Drag &amp; DropZones in- of uitschakelen">
+<!ENTITY dendzones.settings.searchengines "Zoekmachines">
+<!ENTITY dendzones.settings.cmitems "Contextmenu-acties">
+<!ENTITY dendzones.settings.other.switchcurrentengine "Na zoeken de huidige zoekmachine wisselen.">
+<!ENTITY dendzones.settings.other.dropzoneshowdelay "Vertraging bij weergave DropZones (in ms)">
+<!ENTITY dendzones.settings.other.opacity "Opaciteitswaarden voor de DropZones (inhoud/koptekst/accentuering)">
+<!ENTITY dendzones.settings.other.maxaxis "Gridomvang">
+<!ENTITY dendzones.settings.other.maxaxis.auto "Automatisch">
+<!ENTITY dendzones.settings.other.usefortext "Activeren bij verslepen van tekst">
+<!ENTITY dendzones.settings.other.useforimages "Activeren bij verslepen van afbeeldingen">
+<!ENTITY dendzones.settings.other.useforlinks "Activeren bij verslepen van koppelingen">
+<!ENTITY dendzones.settings.search.openintab "Zoekresultaten in een nieuw tabblad openen">
+<!ENTITY dendzones.settings.search.activatetab "Een nieuw tabblad geopend vanuit een zoekopdracht activeren">
+<!ENTITY dendzones.settings.other.handlecontextclick "Drag &amp; DropZones gebruiken in plaats van het contextmenu">

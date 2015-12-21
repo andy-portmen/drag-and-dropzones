@@ -1,0 +1,20 @@
+<!ENTITY dendzones.settings.title "Подешавања ДропЗона">
+<!ENTITY dendzones.settings.general "ДропЗоне">
+<!ENTITY dendzones.settings.dropzones "Подешавања ДропЗона">
+<!ENTITY dendzones.settings.misc "Разно">
+<!ENTITY dendzones.settings.defaultcolor "Боја ДропЗона (кликните на ДропЗоне да бисте их обојили)">
+<!ENTITY dendzones.toolbar.toggledend "ДропЗоне">
+<!ENTITY dendzones.toolbar.toggledend.tooltip "Укључите или искључите ДропЗоне">
+<!ENTITY dendzones.settings.searchengines "Претраживачи">
+<!ENTITY dendzones.settings.cmitems "Акције садржајног менија">
+<!ENTITY dendzones.settings.other.switchcurrentengine "Промени подразумевани претраживач након претраживања.">
+<!ENTITY dendzones.settings.other.dropzoneshowdelay "Одгођено приказивање зона за пуштање (у мс)">
+<!ENTITY dendzones.settings.other.opacity "Прозирност зона за пуштање (садржај/заглавље/означавање)">
+<!ENTITY dendzones.settings.other.maxaxis "Величина мреже">
+<!ENTITY dendzones.settings.other.maxaxis.auto "Ауто">
+<!ENTITY dendzones.settings.other.usefortext "Активирај приликом превлачења текста">
+<!ENTITY dendzones.settings.other.useforimages "Активирај приликом превлачења слика">
+<!ENTITY dendzones.settings.other.useforlinks "Активирај приликом превлачења веза">
+<!ENTITY dendzones.settings.search.openintab "Резултате отварај у новим језичцима">
+<!ENTITY dendzones.settings.search.activatetab "Активирај нови језичак отворен из претраге">
+<!ENTITY dendzones.settings.other.handlecontextclick "Користи ДропЗоне уместо садржајног менија">

@@ -1,0 +1,20 @@
+<!ENTITY dendzones.settings.title "Drag &amp; DropZones nastavenie">
+<!ENTITY dendzones.settings.general "Drag &amp; DropZones">
+<!ENTITY dendzones.settings.dropzones "Úprava DropZone">
+<!ENTITY dendzones.settings.misc "Iné">
+<!ENTITY dendzones.settings.defaultcolor "Farby DropZone (kliknite pre vybratie farby)">
+<!ENTITY dendzones.toolbar.toggledend "Drag &amp; DropZones">
+<!ENTITY dendzones.toolbar.toggledend.tooltip "Prepínanie Drag &amp; DropZones On or Off">
+<!ENTITY dendzones.settings.searchengines "Hľadať prostriedky">
+<!ENTITY dendzones.settings.cmitems "Kontextový zoznam akcií">
+<!ENTITY dendzones.settings.other.switchcurrentengine "Po vyhľadávaní prepni do Search Engine.">
+<!ENTITY dendzones.settings.other.dropzoneshowdelay "Oneskorenie zobrazenia Dropzones (v ms)">
+<!ENTITY dendzones.settings.other.opacity "Nepriehľadnutelné hodnoty DropZones (obsah/záhlavie/zvýraznenie)">
+<!ENTITY dendzones.settings.other.maxaxis "Veľkosť mriežky">
+<!ENTITY dendzones.settings.other.maxaxis.auto "Auto">
+<!ENTITY dendzones.settings.other.usefortext "Aktivovať nad textom">
+<!ENTITY dendzones.settings.other.useforimages "Aktivovať nad obrázkom">
+<!ENTITY dendzones.settings.other.useforlinks "Aktivovať nad odkazom">
+<!ENTITY dendzones.settings.search.openintab "Otvoriť výsledky vyhľadávania v novej záložke">
+<!ENTITY dendzones.settings.search.activatetab "Aktivovať otvorenie novej záložky z vyhľadavania">
+<!ENTITY dendzones.settings.other.handlecontextclick "Umiestniť Drag &amp; DropZones v kontextovom menu">

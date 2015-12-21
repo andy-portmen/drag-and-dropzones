@@ -1,0 +1,23 @@
+content dendzones	chrome/content/dendzones/
+
+locale  dendzones	en-US	chrome/locale/en-US/
+locale  dendzones	fr	chrome/locale/fr/
+locale  dendzones	it-IT	chrome/locale/it-IT/
+locale  dendzones	ja	chrome/locale/ja/
+locale  dendzones	es-ES	chrome/locale/es-ES/
+locale  dendzones	pl	chrome/locale/pl/
+locale  dendzones	ar	chrome/locale/ar/
+locale  dendzones	ar-SA	chrome/locale/ar-SA/
+locale  dendzones	hu-HU	chrome/locale/hu-HU/
+locale  dendzones	pt-PT	chrome/locale/pt-PT/
+locale  dendzones	sk-SK	chrome/locale/sk-SK/
+locale  dendzones	sr	chrome/locale/sr/
+locale  dendzones	uk-UA	chrome/locale/uk-UA/
+locale  dendzones	nl	chrome/locale/nl/
+
+skin	dendzones   classic/1.0   chrome/skin/classic/dendzones/
+
+style	chrome://global/content/customizeToolbar.xul	chrome://dendzones/skin/dendzones.css
+
+overlay	chrome://browser/content/browser.xul	chrome://dendzones/content/dendzones.xul
+

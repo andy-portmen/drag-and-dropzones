@@ -1,0 +1,20 @@
+<!ENTITY dendzones.settings.title "Paramètres de Drag&amp;DropZones">
+<!ENTITY dendzones.settings.general "Drag&amp;DropZones">
+<!ENTITY dendzones.settings.dropzones "Paramètres pour DropZone">
+<!ENTITY dendzones.settings.misc "Divers">
+<!ENTITY dendzones.settings.defaultcolor "Couleur de la DropZone (cliquez sur une zone pour la colorer)">
+<!ENTITY dendzones.toolbar.toggledend "Zones de glisser-déposer">
+<!ENTITY dendzones.toolbar.toggledend.tooltip "Activer/désactiver les zones de glisser-déposer">
+<!ENTITY dendzones.settings.searchengines "Moteurs de recherche">
+<!ENTITY dendzones.settings.cmitems "Actions depuis le menu contextuel">
+<!ENTITY dendzones.settings.other.switchcurrentengine "Changer le moteur de recherche courant après la recherche.">
+<!ENTITY dendzones.settings.other.dropzoneshowdelay "Délai avant d'afficher les zones de glisser-déposer (en ms)">
+<!ENTITY dendzones.settings.other.opacity "Degré d'opacité des zones de glisser-déposer (content/header/surlignage)">
+<!ENTITY dendzones.settings.other.maxaxis "Taille de la grille">
+<!ENTITY dendzones.settings.other.maxaxis.auto "Auto">
+<!ENTITY dendzones.settings.other.usefortext "Activer quand du texte est glissé-déposé">
+<!ENTITY dendzones.settings.other.useforimages "Activer quand des images sont glissées-déposées">
+<!ENTITY dendzones.settings.other.useforlinks "Activer quand des liens sont glissés-déposés">
+<!ENTITY dendzones.settings.search.openintab "Ouvrir les résultats de recherche dans un nouvel onglet">
+<!ENTITY dendzones.settings.search.activatetab "Activer un nouvel onglet ouvert depuis une recherche">
+<!ENTITY dendzones.settings.other.handlecontextclick "Utilisez Drag &amp; DropZones à la place du menu contextuel">

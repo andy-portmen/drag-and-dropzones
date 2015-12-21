@@ -1,0 +1,20 @@
+<!ENTITY dendzones.settings.title "Drag &amp; DropZones beállítások">
+<!ENTITY dendzones.settings.general "Drag &amp; DropZones">
+<!ENTITY dendzones.settings.dropzones "DropZone használata">
+<!ENTITY dendzones.settings.misc "Egyéb">
+<!ENTITY dendzones.settings.defaultcolor "DropZone szín (válasszon színt, majd kattintson a zónára a színezéshez)">
+<!ENTITY dendzones.toolbar.toggledend "Drag &amp; DropZones">
+<!ENTITY dendzones.toolbar.toggledend.tooltip "Drag &amp; DropZones be- vagy kikapcsolása">
+<!ENTITY dendzones.settings.searchengines "Keresőmotorok">
+<!ENTITY dendzones.settings.cmitems "Helyi menü elemek">
+<!ENTITY dendzones.settings.other.switchcurrentengine "Aktív keresőmotor váltása a keresés után">
+<!ENTITY dendzones.settings.other.dropzoneshowdelay "DropZones megjelenésének késleltetése (ezred mp)">
+<!ENTITY dendzones.settings.other.opacity "DropZones átlátszóságának beállítása (zóna/fejléc/kiemelés)">
+<!ENTITY dendzones.settings.other.maxaxis "Rács mérete">
+<!ENTITY dendzones.settings.other.maxaxis.auto "Automatikus">
+<!ENTITY dendzones.settings.other.usefortext "Aktiválás szöveg húzásakor">
+<!ENTITY dendzones.settings.other.useforimages "Aktiválás képek húzásakor">
+<!ENTITY dendzones.settings.other.useforlinks "Aktiválás linkek húzásakor">
+<!ENTITY dendzones.settings.search.openintab "Keresési eredmények megnyitása új lapon">
+<!ENTITY dendzones.settings.search.activatetab "Keresési eredmények megnyitásakor kerüljön váltás (fókusz) az új lapra">
+<!ENTITY dendzones.settings.other.handlecontextclick "Drag &amp; DropZones használata a helyi menü helyett">

@@ -1,0 +1,20 @@
+<!ENTITY dendzones.settings.title "خصائص مناطق السحب و الإلقاء">
+<!ENTITY dendzones.settings.general "مناطق السحب و الإلقاء">
+<!ENTITY dendzones.settings.dropzones "تنصيب منطقة الإلقاء">
+<!ENTITY dendzones.settings.misc "متنوع">
+<!ENTITY dendzones.settings.defaultcolor "لون منطقة الإلقاء">
+<!ENTITY dendzones.toolbar.toggledend "مناطق السحب و الإلقاء">
+<!ENTITY dendzones.toolbar.toggledend.tooltip "تحويل مناطق السحب و الإلقاء مغلق أو مفتوح">
+<!ENTITY dendzones.settings.searchengines "محركات البحث">
+<!ENTITY dendzones.settings.cmitems "احداث القائمة المنسدلة">
+<!ENTITY dendzones.settings.other.switchcurrentengine "تحويل الى محرك البحث الحالى بعد إجراء البحث">
+<!ENTITY dendzones.settings.other.dropzoneshowdelay "تأخير إظهار منطقة الإلقاء (بالمللى ثانية)">
+<!ENTITY dendzones.settings.other.opacity "قيم الشفافية لمناطق الإلقاء (المحتوى/العنوان/التحديد)">
+<!ENTITY dendzones.settings.other.maxaxis "مقاس الشبكة">
+<!ENTITY dendzones.settings.other.maxaxis.auto "آلى">
+<!ENTITY dendzones.settings.other.usefortext "تفعيل عند سحب نص">
+<!ENTITY dendzones.settings.other.useforimages "تفعيل عند سحب الصور">
+<!ENTITY dendzones.settings.other.useforlinks "تفعيل عند سحب الوصلات التشعبية">
+<!ENTITY dendzones.settings.search.openintab "فتح نتيجة البحث فى شريط جديد">
+<!ENTITY dendzones.settings.search.activatetab "تفعيل الشريط الجديدى المفتوح من نتيجة البحث">
+<!ENTITY dendzones.settings.other.handlecontextclick "استخدم منطقة السحب و الإلقاء بديلآ عن القائمة المنسدلة">

@@ -1,0 +1,20 @@
+<!ENTITY dendzones.settings.title "Drag &amp; DropZones 設定">
+<!ENTITY dendzones.settings.general "Drag &amp; DropZones">
+<!ENTITY dendzones.settings.dropzones "DropZone の配置">
+<!ENTITY dendzones.settings.misc "いろいろ">
+<!ENTITY dendzones.settings.defaultcolor "DropZone 色 (色付けする DropZone でクリック)">
+<!ENTITY dendzones.toolbar.toggledend "Drag &amp; DropZones">
+<!ENTITY dendzones.toolbar.toggledend.tooltip "Drag &amp; DropZones のオン・オフを切り替えます">
+<!ENTITY dendzones.settings.searchengines "検索エンジン">
+<!ENTITY dendzones.settings.cmitems "コンテキストメニュー動作">
+<!ENTITY dendzones.settings.other.switchcurrentengine "検索したら現在の検索エンジンを切り替える。">
+<!ENTITY dendzones.settings.other.dropzoneshowdelay "DropZone 表示の遅延時間 (ミリ秒)">
+<!ENTITY dendzones.settings.other.opacity "DropZone の不透明度 (内容・ヘッダ・強調)">
+<!ENTITY dendzones.settings.other.maxaxis "格子サイズ">
+<!ENTITY dendzones.settings.other.maxaxis.auto "自動">
+<!ENTITY dendzones.settings.other.usefortext "テキストをドラッグする際に有効化する">
+<!ENTITY dendzones.settings.other.useforimages "画像をドラッグする際に有効化する">
+<!ENTITY dendzones.settings.other.useforlinks "リンクをドラッグする際に有効化する">
+<!ENTITY dendzones.settings.search.openintab "新しいタブで検索結果を開く">
+<!ENTITY dendzones.settings.search.activatetab "検索から開かれた新しいタブを有効化する">
+<!ENTITY dendzones.settings.other.handlecontextclick "コンテキストメニューの代わりに Drag &amp; DropZones を利用する">

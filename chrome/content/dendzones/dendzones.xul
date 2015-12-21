@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://dendzones/skin/dendzones.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://dendzones/locale/dendzones.dtd">
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script type="application/x-javascript" src="chrome://dendzones/content/dendzones.js"/>
+<script type="application/x-javascript" src="chrome://dendzones/content/utils.js"/>
+<script type="application/x-javascript" src="chrome://global/content/nsDragAndDrop.js"/>
+<script type="application/x-javascript" src="chrome://global/content/nsTransferable.js"/> 
+
+<toolbarpalette id="BrowserToolbarPalette">
+	<toolbarbutton id="DenDZonesToggleDenD" class="toolbarbutton-1 chromeclass-toolbar-additional" dendon="true" label="&dendzones.toolbar.toggledend;" oncommand="DenDZonesShell.DenDZones_ToggleDenD();" tooltiptext="&dendzones.toolbar.toggledend.tooltip;"/>
+</toolbarpalette>
+
+<menupopup id="menu_ToolsPopup">
+	<menuitem id="DenDZonesSettings" class="menuitem-iconic" label="&dendzones.settings.title;" oncommand="DenDZonesShell.DenDZones_OpenSettings();"/>
+</menupopup>
+
+</overlay>
+

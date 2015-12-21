@@ -1,0 +1,20 @@
+<!ENTITY dendzones.settings.title "Inställningar för Drag &amp; DropZones">
+<!ENTITY dendzones.settings.general "Drag &amp; DropZones">
+<!ENTITY dendzones.settings.dropzones "DropZone installation">
+<!ENTITY dendzones.settings.misc "Miscellaneous">
+<!ENTITY dendzones.settings.defaultcolor "DropZone Color (click on a DropZone to color it)">
+<!ENTITY dendzones.toolbar.toggledend "Drag &amp; Dropzoner">
+<!ENTITY dendzones.toolbar.toggledend.tooltip "Ställ in Drag &amp; Dropzoner på eller av">
+<!ENTITY dendzones.settings.searchengines "Sökmaskiner">
+<!ENTITY dendzones.settings.cmitems "Meny händelser">
+<!ENTITY dendzones.settings.other.switchcurrentengine "Byt nuvarande Sökmaskin efter sökning.">
+<!ENTITY dendzones.settings.other.dropzoneshowdelay "Dröj med att visa Dropzones (i ms)">
+<!ENTITY dendzones.settings.other.opacity "Genomskinglighetsvärden för DropZones (innehåll/rubrik/belysning)">
+<!ENTITY dendzones.settings.other.maxaxis "Grid size">
+<!ENTITY dendzones.settings.other.maxaxis.auto "Auto">
+<!ENTITY dendzones.settings.other.usefortext "Activate when dragging text">
+<!ENTITY dendzones.settings.other.useforimages "Activate when dragging images">
+<!ENTITY dendzones.settings.other.useforlinks "Activate when dragging links">
+<!ENTITY dendzones.settings.search.openintab "Open search results in a new tab">
+<!ENTITY dendzones.settings.search.activatetab "Activate a new tab opened from a search">
+<!ENTITY dendzones.settings.other.handlecontextclick "Use Drag &amp; DropZones instead of the context menu">

@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://browser/skin/browser.css" type="text/css" ?>
+<?xml-stylesheet href="chrome://dendzones/skin/dendzones.css" type="text/css"?>
+<?xml-stylesheet href="chrome://mozapps/skin/pref/pref.css" type="text/css"?>
+<?xml-stylesheet href="chrome://mozapps/content/preferences/preferences.css"?>
+<?xml-stylesheet href="chrome://browser/skin/preferences/preferences.css"?>
+<!DOCTYPE overlay SYSTEM "chrome://dendzones/locale/dendzones.dtd">
+
+<prefwindow id="dendzones-window" type="prefwindow"
+        title="&dendzones.settings.title;"
+        ondialogaccept="return DenDZones_DeInitEngineManager(true);"
+        onload="DenDZones_InitEngineManager();"
+        onunload="return DenDZones_DeInitEngineManager(false);"
+        buttons="accept,cancel"
+        persist="screenX screenY" 
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" xmlns:html="http://www.w3.org/1999/xhtml">
+
+<prefpane id="pp_general" label="&dendzones.settings.general;" flex="1">
+    <preferences>
+        <preference id="pref_dropzonecolor" name="extensions.dendzones.dropzonecolor" type="string"/>
+        <preference id="pref_switchcurrentengine" name="extensions.dendzones.switchcurrentengine" type="bool"/>
+        <preference id="pref_dropzoneshowdelay" name="extensions.dendzones.dropzoneshowdelay" type="int"/>
+        <preference id="pref_maxaxis" name="extensions.dendzones.maxaxis" type="int" onchange="UpdateDZMaxAxis(this);"/>
+        <preference id="pref_contentopacity" name="extensions.dendzones.contentopacity" type="string" onchange="ValidateOpacity(this);"/>
+        <preference id="pref_headeropacity" name="extensions.dendzones.headeropacity" type="string" onchange="ValidateOpacity(this);"/>
+        <preference id="pref_highlightopacity" name="extensions.dendzones.highlightopacity" type="string" onchange="ValidateOpacity(this);"/>
+        <preference id="pref_usefortext" name="extensions.dendzones.usefortext" type="bool"/>
+        <preference id="pref_useforimages" name="extensions.dendzones.useforimages" type="bool"/>
+        <preference id="pref_useforlinks" name="extensions.dendzones.useforlinks" type="bool"/>
+        <preference id="pref_openintab" name="extensions.dendzones.search.openintab" type="bool"/>
+        <preference id="pref_activatetab" name="extensions.dendzones.search.activatetab" type="bool"/>
+        <preference id="pref_handlecontextclick" name="extensions.dendzones.handlecontextclick" type="bool"/>
+    </preferences>
+
+    <hbox flex="1">
+        <vbox id="sourcelists" flex="1">
+            <tabbox id="tabbox_sourcelists" flex="1">
+                <tabs>
+                    <tab label="&dendzones.settings.searchengines;" flex="1"/>
+                    <tab label="&dendzones.settings.cmitems;" flex="1"/>
+                </tabs>
+                <tabpanels flex="1">
+                    <tabpanel>
+                        <vbox flex="1">
+                            <listbox id="searchengines" flex="1">
+                            </listbox>                
+                        </vbox>
+                    </tabpanel>
+                    <tabpanel>
+                        <vbox flex="1">
+                            <listbox id="cmitems" flex="1">
+                            </listbox>                
+                        </vbox>
+                    </tabpanel>
+                </tabpanels>
+            </tabbox>
+        </vbox>
+        <vbox>
+            <groupbox>
+                <caption label="&dendzones.settings.dropzones;"/>
+                <vbox id="dropzonebox">
+                    <hbox><hbox id="dz_0_0" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_1_0" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_2_0" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_3_0" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_4_0" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_5_0" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_6_0" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_7_0" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_8_0" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_9_0" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox></hbox>
+                    <hbox><hbox id="dz_0_1" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_1_1" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_2_1" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_3_1" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_4_1" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_5_1" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_6_1" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_7_1" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_8_1" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_9_1" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox></hbox>
+                    <hbox><hbox id="dz_0_2" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_1_2" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_2_2" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_3_2" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_4_2" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_5_2" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_6_2" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_7_2" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_8_2" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_9_2" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox></hbox>
+                    <hbox><hbox id="dz_0_3" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_1_3" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_2_3" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_3_3" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_4_3" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_5_3" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_6_3" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_7_3" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_8_3" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_9_3" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox></hbox>
+                    <hbox><hbox id="dz_0_4" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_1_4" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_2_4" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_3_4" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_4_4" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_5_4" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_6_4" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_7_4" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_8_4" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_9_4" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox></hbox>
+                    <hbox><hbox id="dz_0_5" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_1_5" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_2_5" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_3_5" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_4_5" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_5_5" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_6_5" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_7_5" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_8_5" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_9_5" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox></hbox>
+                    <hbox><hbox id="dz_0_6" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_1_6" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_2_6" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_3_6" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_4_6" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_5_6" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_6_6" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_7_6" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_8_6" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_9_6" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox></hbox>
+                    <hbox><hbox id="dz_0_7" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_1_7" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_2_7" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_3_7" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_4_7" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_5_7" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_6_7" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_7_7" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_8_7" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_9_7" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox></hbox>
+                    <hbox><hbox id="dz_0_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_1_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_2_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_3_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_4_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_5_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_6_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_7_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_8_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_9_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox></hbox>
+                    <hbox><hbox id="dz_0_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_1_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_2_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_3_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_4_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_5_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_6_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_7_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_8_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_9_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox></hbox>
+                </vbox>
+            </groupbox>        
+
+            <groupbox>
+                <caption label="&dendzones.settings.misc;"/>
+
+                <hbox>
+                    <label value="&dendzones.settings.defaultcolor;" style="padding-top: 8px"/>
+                    <colorpicker id="dropzonecolor" preference="pref_dropzonecolor" palettename="standard" type="button"/>
+                </hbox>
+                
+                <hbox>
+                    <label value="&dendzones.settings.other.maxaxis;" style="padding-top: 8px"/>
+                    <menulist preference="pref_maxaxis">
+                        <menupopup>
+                            <menuitem value="0" label="&dendzones.settings.other.maxaxis.auto;"/>
+                            <menuitem value="4" label="4x4"/>
+                            <menuitem value="6" label="6x6"/>
+                            <menuitem value="8" label="8x8"/>
+                            <menuitem value="10" label="10x10"/>
+                        </menupopup>
+                    </menulist>
+                </hbox>
+                
+                <hbox>
+                    <label value="&dendzones.settings.other.dropzoneshowdelay;" style="text-align: right; margin-top: 5px"/>
+                    <textbox preference="pref_dropzoneshowdelay" style="max-width: 50px;"/>
+                </hbox>
+                
+                <hbox>
+                    <label value="&dendzones.settings.other.opacity;" style="text-align: right; margin-top: 5px"/>
+                    <hbox flex="1"/>
+                    <textbox preference="pref_contentopacity" style="max-width: 30px;"/>
+                    <textbox preference="pref_headeropacity" style="max-width: 30px;"/>
+                    <textbox preference="pref_highlightopacity" style="max-width: 30px;"/>
+                </hbox>
+
+                <checkbox preference="pref_switchcurrentengine" label="&dendzones.settings.other.switchcurrentengine;"/>
+                <checkbox preference="pref_openintab" label="&dendzones.settings.search.openintab;"/>
+                <checkbox preference="pref_activatetab" label="&dendzones.settings.search.activatetab;"/>
+
+                <checkbox preference="pref_usefortext" label="&dendzones.settings.other.usefortext;"/>
+                <checkbox preference="pref_useforimages" label="&dendzones.settings.other.useforimages;"/>
+                <checkbox preference="pref_useforlinks" label="&dendzones.settings.other.useforlinks;"/>
+                <checkbox preference="pref_handlecontextclick" label="&dendzones.settings.other.handlecontextclick;"/>
+            </groupbox>        
+        </vbox>
+    </hbox>
+</prefpane>
+
+<script type="application/x-javascript" src="chrome://browser/content/search/engineManager.js"/>
+<script type="application/x-javascript" src="chrome://dendzones/content/utils.js"/>
+<script type="application/x-javascript" src="chrome://global/content/nsDragAndDrop.js"/>
+<script type="application/x-javascript" src="chrome://global/content/nsTransferable.js"/> 
+<script type="application/x-javascript" src="chrome://dendzones/content/settings.js"/>
+
+</prefwindow>

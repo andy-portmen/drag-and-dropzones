@@ -1,0 +1,53 @@
+#dropzonecolor {margin-top: 5px; min-height: 24px; max-height: 24px;}
+
+#dendzones-window #dropzonebox {margin: 5px;}
+.dz {opacity:0.6; border: solid 1px rgb(124,124,124); width: 45px; height: 20px;}
+.dz[dragstate="1"], .dz:hover {opacity:0.8;}
+.dz[dragstate="2"] {opacity:1.0;}
+.dz image {max-width: 45px; padding: 1px 13px 1px 13px;}
+
+#dendzones-window #dropzonebox[maxaxis="4"] #dz_4_0 {border-left: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="4"] #dz_4_1 {border-left: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="4"] #dz_4_2 {border-left: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="4"] #dz_4_3 {border-left: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="4"] #dz_0_4 {border-top: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="4"] #dz_1_4 {border-top: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="4"] #dz_2_4 {border-top: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="4"] #dz_3_4 {border-top: 2px dashed red;}
+
+#dendzones-window #dropzonebox[maxaxis="6"] #dz_6_0 {border-left: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="6"] #dz_6_1 {border-left: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="6"] #dz_6_2 {border-left: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="6"] #dz_6_3 {border-left: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="6"] #dz_6_4 {border-left: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="6"] #dz_6_5 {border-left: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="6"] #dz_0_6 {border-top: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="6"] #dz_1_6 {border-top: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="6"] #dz_2_6 {border-top: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="6"] #dz_3_6 {border-top: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="6"] #dz_4_6 {border-top: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="6"] #dz_5_6 {border-top: 2px dashed red;}
+
+#dendzones-window #dropzonebox[maxaxis="8"] #dz_8_0 {border-left: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="8"] #dz_8_1 {border-left: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="8"] #dz_8_2 {border-left: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="8"] #dz_8_3 {border-left: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="8"] #dz_8_4 {border-left: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="8"] #dz_8_5 {border-left: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="8"] #dz_8_6 {border-left: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="8"] #dz_8_7 {border-left: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="8"] #dz_0_8 {border-top: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="8"] #dz_1_8 {border-top: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="8"] #dz_2_8 {border-top: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="8"] #dz_3_8 {border-top: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="8"] #dz_4_8 {border-top: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="8"] #dz_5_8 {border-top: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="8"] #dz_6_8 {border-top: 2px dashed red;}
+#dendzones-window #dropzonebox[maxaxis="8"] #dz_7_8 {border-top: 2px dashed red;}
+
+#DenDZonesToggleDenD {list-style-image: url('chrome://dendzones/skin/dragndrop_on_24.png');}
+toolbar[iconsize="small"] #DenDZonesToggleDenD {list-style-image: url('chrome://dendzones/skin/dragndrop_on_16.png');}
+#DenDZonesToggleDenD[dendon="false"] {list-style-image: url('chrome://dendzones/skin/dragndrop_off_24.png');}
+toolbar[iconsize="small"] #DenDZonesToggleDenD[dendon="false"] {list-style-image: url('chrome://dendzones/skin/dragndrop_off_16.png');}
+
+#DenDZonesSettings {list-style-image: url('chrome://dendzones/skin/dragndrop_settings.png');}
