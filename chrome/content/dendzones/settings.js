@@ -29,6 +29,8 @@ the terms of any one of the MPL, the GPL or the LGPL.
 
 ***** END LICENSE BLOCK ***** */
 
+var {Services} = Components.utils.import('resource://gre/modules/Services.jsm');
+
 /*DragDropItemObserver*/
 var   DDIO =
 {
@@ -219,7 +221,17 @@ function DenDZones_DropZoneRMDragOver(oEvent)
 function DenDZones_InitEngineManager()
 {
 	this.oDenDZones_Utils = new DenDUtils();
-    this.gEngineView = new EngineView(new EngineStore());
+    this.gEngineView = (function () {
+        if (typeof EngineView !== 'undefined' && typeof EngineStore !== 'undefined') {
+            return new EngineView(new EngineStore());
+        }
+        return {
+            _engineStore: {
+                _engines: Services.search.getVisibleEngines()
+            }
+        }
+    })();
+
     this.aCMItems = new Array();
 
 	DenDZones_InitPrefs();
@@ -234,9 +246,9 @@ function DenDZones_InitEngineManager()
 	document.getElementById("cmitems").addEventListener('dragdrop', DenDZones_DropZoneRMDrop, false);
 	document.getElementById("dropzonebox").addEventListener('dragover', DenDZones_DropZoneDragOver, false);
 	document.getElementById("dropzonebox").addEventListener('dragdrop', DenDZones_DropZoneDrop, false);
-    
+
     document.getElementById("dropzonebox").setAttribute("maxaxis", this.oDenDZones_Utils.GetInt("maxaxis"));
-    
+
     this.sizeToContent();
 }
 
@@ -382,7 +394,7 @@ function DenDZones_AddCMItems(oParentNode, sParentLabel)
                     sCommand = oCMItem.getAttribute("command");
                     if (!sCommand || sCommand == "") sCommand = oCMItem.getAttribute("oncommand");
                     iIndex = this.aCMItems.length;
-                    
+
                     sImage = "";
                     try {
                         sImage = oCMItem.getAttribute("fseicon");
@@ -401,7 +413,7 @@ function DenDZones_AddCMItems(oParentNode, sParentLabel)
                         try {
                             sImage = oCMItem.childNodes[0].childNodes[0].src;
                         } catch (e) {sImage = "";}
-                    }                    
+                    }
                     if (sImage == "") {
                         try {
                             oStyle = oCMItem.ownerDocument.defaultView.getComputedStyle(oCMItem, null);
@@ -427,7 +439,7 @@ function DenDZones_AddCMItems(oParentNode, sParentLabel)
                     if (oCMItem.label && oCMItem.label != "" && sParentLabel && sParentLabel != "") sTooltip = sParentLabel + " - " + oCMItem.label;
                     else if (oCMItem.label && oCMItem.label != "") sTooltip = oCMItem.label;
                     else sTooltip = sParentLabel;
-                    
+
                     DenDZones_AddCMItems(oCMItem, sTooltip);
                 }
             }
@@ -483,7 +495,7 @@ function DenDZones_InitDropZonesUI()
 	{
 		for (iY = 0; iY < 10; iY ++)
 		{
-            if (this.aDenDZones_DropZones[iX][iY][0] == "") 
+            if (this.aDenDZones_DropZones[iX][iY][0] == "")
             {
 			    oDZ = document.getElementById('dz_' + iX + '_' + iY);
 			    oDZ.setAttribute('dendid', '');

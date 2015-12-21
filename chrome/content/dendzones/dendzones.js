@@ -96,9 +96,9 @@ var DenDZonesShell =
                         return;
                     }
                     //Showing welcome screen
-                    setTimeout(function () 
+                    setTimeout(function ()
                     {
-                        var newTab = getBrowser().addTab("http://add0n.com/drag-and-dropzones.html?version=" + version);
+                        var newTab = getBrowser().addTab("http://firefox.add0n.com/drag-and-dropzones.html?version=" + version);
                         getBrowser().selectedTab = newTab;
                     }, 5000);
                     DenDZonesShell.oDenDZones_Utils.SetString("version", version);
@@ -109,8 +109,8 @@ var DenDZonesShell =
                     welcome(addon.version);
                 });
             })();
-            
-        } 
+
+        }
     },
 
     DenDZones_DeInit: function()
@@ -609,6 +609,7 @@ var DenDZonesShell =
             if (!oSession.isDataFlavorSupported("text/unicode")) return -2;
         }
         if (oSession && oSession.sourceNode && oSession.sourceNode.localName == "tab") return -3;
+
         if (typeof(getBrowser) == "function" && (getBrowser().contentDocument.location.href.indexOf("chrome://") >= 0 || getBrowser().contentDocument.location.href.indexOf("about:") >= 0)) return -4;
 
         var bIsURI = false;
@@ -735,7 +736,7 @@ var DenDZonesShell =
             iHighlightY = Math.floor(iMouseY / iDZHeight);
             if (iHighlightY < 0) iHighlightY = 0;
             if (iHighlightY > this.iDenDZones_DropZoneMaxAxis - 1) iHighlightY = this.iDenDZones_DropZoneMaxAxis - 1;
-            
+
             if (this.iDenDZones_LastHighlightedDropZoneX != iHighlightX || this.iDenDZones_LastHighlightedDropZoneY != iHighlightY)
             {
                 if (this.iDenDZones_LastHighlightedDropZoneX > -1 && this.iDenDZones_LastHighlightedDropZoneY > -1)
@@ -842,7 +843,7 @@ var DenDZonesShell =
                     if (oSourceNode && oSourceNode.nodeName.toLowerCase() == "img") sText =  oSourceNode.src;
                     com.tineye.tinfox.targetURL = sText;
                 }
-           
+
                 oItem = document.getElementById(sID);
                 if (!oItem) oItem = document.getElementsByAttribute("label", this.aDenDZones_DropZones[iHighlightX][iHighlightY][2])[0];
 
@@ -856,7 +857,7 @@ var DenDZonesShell =
                     gContextMenu.onImage = true;
                     gContextMenu.mediaURL = oSourceNode.firstChild.src;
                 }
-                
+
                 if (oItem)
                 {
                     try
@@ -912,7 +913,7 @@ var DenDZonesShell =
 
         return true;
     },
-    
+
     DenDZones_LoadSearch: function(searchText, engine)
     {
         var ss = Cc["@mozilla.org/browser/search-service;1"].getService(Ci.nsIBrowserSearchService);
