@@ -31,41 +31,46 @@ the terms of any one of the MPL, the GPL or the LGPL.
 
 var {Services} = Components.utils.import('resource://gre/modules/Services.jsm');
 
+var ENGINE_FLAVOR = ENGINE_FLAVOR || 'text/x-moz-search-engine';
+
 /*DragDropItemObserver*/
 var   DDIO =
 {
-	onDragStart: function (evt,transferData,action)
-	{
-		var oDZ = evt.target;
-		if (oDZ.getAttribute('class') != "dz") oDZ = oDZ.parentNode;
-		var sData = oDZ.getAttribute("id");
-		oDZ.setAttribute('dragstate', '1');
-		transferData.data = new TransferData();
-		transferData.data.addDataForFlavour("text/unicode", sData);
-	}
+    onDragStart: function (evt,transferData,action)
+    {
+        var oDZ = evt.target;
+        if (oDZ.getAttribute('class') != "dz") oDZ = oDZ.parentNode;
+        var sData = oDZ.getAttribute("id");
+        oDZ.setAttribute('dragstate', '1');
+        transferData.data = new TransferData();
+        transferData.data.addDataForFlavour("text/unicode", sData);
+    }
 };
 
 /*DragDropSearchEngineItemObserver*/
 var   DDSSIO =
 {
-	onDragStart: function (evt,transferData,action)
-	{
+    onDragStart: function (evt,transferData,action)
+    {
         var oListbox = evt.target.parentNode;
+        console.error(oListbox.nodeName);
         if (!oListbox || oListbox.nodeName != "listbox") return;
 
         var iSelectedIndex = oListbox.selectedIndex;
+        console.error(iSelectedIndex);
         if (iSelectedIndex == -1) return;
 
         transferData.data = new TransferData();
         transferData.data.addDataForFlavour(ENGINE_FLAVOR, "ss_" + iSelectedIndex.toString());
-	}
+        console.error(ENGINE_FLAVOR, "ss_" + iSelectedIndex.toString());
+    }
 };
 
 /*DragDropContextMenuItemObserver*/
 var   DDCMIO =
 {
-	onDragStart: function (evt,transferData,action)
-	{
+    onDragStart: function (evt,transferData,action)
+    {
         var oListbox = evt.target.parentNode;
         if (!oListbox || oListbox.nodeName != "listbox") return;
 
@@ -74,153 +79,153 @@ var   DDCMIO =
 
         transferData.data = new TransferData();
         transferData.data.addDataForFlavour(ENGINE_FLAVOR, "cm_" + iSelectedIndex.toString());
-	}
+    }
 };
 
 var   DenDZones_DragDropObserver =
 {
-	getSupportedFlavours : function ()
-	{
-		var oFS = new FlavourSet();
-		oFS.appendFlavour("text/unicode");
-		oFS.appendFlavour("text/x-moz-search-engine");
-		return oFS;
-	},
+    getSupportedFlavours : function ()
+    {
+        var oFS = new FlavourSet();
+        oFS.appendFlavour("text/unicode");
+        oFS.appendFlavour("text/x-moz-search-engine");
+        return oFS;
+    },
 
-	onDragOver: function (evt,flavour,session)
-	{
-		var oDZs = document.getElementsByAttribute('class', 'dz');
-		var oDZ;
-		var iIndex, iLen = oDZs.length;
+    onDragOver: function (evt,flavour,session)
+    {
+        var oDZs = document.getElementsByAttribute('class', 'dz');
+        var oDZ;
+        var iIndex, iLen = oDZs.length;
 
-		for (iIndex = 0; iIndex < iLen; iIndex ++)
-		{
-			oDZs[iIndex].setAttribute('dragstate', '');
-			if (oDZs[iIndex].getAttribute('dendid') == '') oDZs[iIndex].style.backgroundColor = "";
-		}
+        for (iIndex = 0; iIndex < iLen; iIndex ++)
+        {
+            oDZs[iIndex].setAttribute('dragstate', '');
+            if (oDZs[iIndex].getAttribute('dendid') == '') oDZs[iIndex].style.backgroundColor = "";
+        }
 
-		oDZ = session.sourceNode;
-		if (oDZ.getAttribute('class') != "dz") oDZ = oDZ.parentNode;
-		if (oDZ.getAttribute('class') != "dz")
-		{
-			//Dragging a Search Engine.
-			oDZ = evt.originalTarget;
-			if (oDZ.getAttribute('class') != "dz") oDZ = oDZ.parentNode;
-			if (oDZ.getAttribute('class') == "dz")
-			{
-				oDZ.setAttribute('dragstate', '2');
-				if (oDZ.getAttribute('selected') != 'true') oDZ.style.backgroundColor = document.getElementById('dropzonecolor').color;
-				session.canDrop = true;
-			}
-		}
-		else
-		{
-			//Dragging a zone.
-			oDZ.setAttribute('dragstate', '1');
+        oDZ = session.sourceNode;
+        if (oDZ.getAttribute('class') != "dz") oDZ = oDZ.parentNode;
+        if (oDZ.getAttribute('class') != "dz")
+        {
+            //Dragging a Search Engine.
+            oDZ = evt.originalTarget;
+            if (oDZ.getAttribute('class') != "dz") oDZ = oDZ.parentNode;
+            if (oDZ.getAttribute('class') == "dz")
+            {
+                oDZ.setAttribute('dragstate', '2');
+                if (oDZ.getAttribute('selected') != 'true') oDZ.style.backgroundColor = document.getElementById('dropzonecolor').color;
+                session.canDrop = true;
+            }
+        }
+        else
+        {
+            //Dragging a zone.
+            oDZ.setAttribute('dragstate', '1');
 
-			oDZ = evt.originalTarget;
-			if (oDZ.getAttribute('class') != "dz") oDZ = oDZ.parentNode;
-			oDZ.setAttribute('dragstate', '2');
+            oDZ = evt.originalTarget;
+            if (oDZ.getAttribute('class') != "dz") oDZ = oDZ.parentNode;
+            oDZ.setAttribute('dragstate', '2');
 
-			session.canDrop = true;
-		}
-		return session.canDrop;
-	},
+            session.canDrop = true;
+        }
+        return session.canDrop;
+    },
 
-	onDrop: function (evt,dropdata,session)
-	{
-		if (dropdata.data && dropdata.data.substr(0, 3) == "dz_")
-		{
-			//Dropping a zone.
-			var oDZs = document.getElementsByAttribute('class', 'dz');
-			var oDZ;
-			var sDroppedID;
-			var sTargetID;
-			var iIndex, iLen = oDZs.length;
+    onDrop: function (evt,dropdata,session)
+    {
+        if (dropdata.data && dropdata.data.substr(0, 3) == "dz_")
+        {
+            //Dropping a zone.
+            var oDZs = document.getElementsByAttribute('class', 'dz');
+            var oDZ;
+            var sDroppedID;
+            var sTargetID;
+            var iIndex, iLen = oDZs.length;
 
-			sDroppedID = dropdata.data;
-			oDZ = evt.target;
-			if (oDZ.getAttribute('class') != "dz") oDZ = oDZ.parentNode;
-			sTargetID = oDZ.getAttribute('id');
+            sDroppedID = dropdata.data;
+            oDZ = evt.target;
+            if (oDZ.getAttribute('class') != "dz") oDZ = oDZ.parentNode;
+            sTargetID = oDZ.getAttribute('id');
 
-			DenDZones_DragSwitchDropZone(sDroppedID, sTargetID);
+            DenDZones_DragSwitchDropZone(sDroppedID, sTargetID);
 
-			for (iIndex = 0; iIndex < iLen; iIndex ++) {oDZs[iIndex].setAttribute('dragstate', '');}
-		}
-		else
-		{
-			var oDZ = evt.target;
-			if (oDZ.getAttribute('class') != "dz") oDZ = oDZ.parentNode;
-			var sTargetID = oDZ.getAttribute('id');
-			DenDZones_DragAssignDropZone(dropdata.data, sTargetID);
+            for (iIndex = 0; iIndex < iLen; iIndex ++) {oDZs[iIndex].setAttribute('dragstate', '');}
+        }
+        else
+        {
+            var oDZ = evt.target;
+            if (oDZ.getAttribute('class') != "dz") oDZ = oDZ.parentNode;
+            var sTargetID = oDZ.getAttribute('id');
+            DenDZones_DragAssignDropZone(dropdata.data, sTargetID);
 
-			for (iIndex = 0; iIndex < iLen; iIndex ++) {oDZs[iIndex].setAttribute('dragstate', '');}
-		}
-	}
+            for (iIndex = 0; iIndex < iLen; iIndex ++) {oDZs[iIndex].setAttribute('dragstate', '');}
+        }
+    }
 };
 
 var   DenDZones_DragDropRMItemObserver =
 {
-	getSupportedFlavours : function ()
-	{
-		var oFS = new FlavourSet();
-		oFS.appendFlavour("text/unicode");
-		return oFS;
-	},
+    getSupportedFlavours : function ()
+    {
+        var oFS = new FlavourSet();
+        oFS.appendFlavour("text/unicode");
+        return oFS;
+    },
 
-	onDragOver: function (evt,flavour,session)
-	{
-		session.canDrop = false;
-		var oDZ;
-		oDZ = session.sourceNode;
-		if (oDZ.getAttribute('class') != "dz") oDZ = oDZ.parentNode;
-		if (oDZ.getAttribute('class') == "dz")
-		{
-			if (evt.target && evt.target.nodeName && evt.target.nodeName.indexOf('tree') < 0)
-			{
-				session.canDrop = true;
-			}
-		}
-		return session.canDrop;
-	},
+    onDragOver: function (evt,flavour,session)
+    {
+        session.canDrop = false;
+        var oDZ;
+        oDZ = session.sourceNode;
+        if (oDZ.getAttribute('class') != "dz") oDZ = oDZ.parentNode;
+        if (oDZ.getAttribute('class') == "dz")
+        {
+            if (evt.target && evt.target.nodeName && evt.target.nodeName.indexOf('tree') < 0)
+            {
+                session.canDrop = true;
+            }
+        }
+        return session.canDrop;
+    },
 
-	onDrop: function (evt,dropdata,session)
-	{
-		if (dropdata.data && dropdata.data.substr(0, 3) == "dz_")
-		{
-			var sDroppedID = dropdata.data;
-			DenDZones_DragRemoveDropZone(sDroppedID);
+    onDrop: function (evt,dropdata,session)
+    {
+        if (dropdata.data && dropdata.data.substr(0, 3) == "dz_")
+        {
+            var sDroppedID = dropdata.data;
+            DenDZones_DragRemoveDropZone(sDroppedID);
 
-			var oDZs = document.getElementsByAttribute('class', 'dz');
-			var iIndex, iLen = oDZs.length;
-			for (iIndex = 0; iIndex < iLen; iIndex ++) {oDZs[iIndex].setAttribute('dragstate', '');}
-		}
-	}
+            var oDZs = document.getElementsByAttribute('class', 'dz');
+            var iIndex, iLen = oDZs.length;
+            for (iIndex = 0; iIndex < iLen; iIndex ++) {oDZs[iIndex].setAttribute('dragstate', '');}
+        }
+    }
 };
 
 function DenDZones_DropZoneDrop(oEvent)
 {
-	nsDragAndDrop.drop(oEvent, DenDZones_DragDropObserver);
+    nsDragAndDrop.drop(oEvent, DenDZones_DragDropObserver);
 }
 
 function DenDZones_DropZoneDragOver(oEvent)
 {
-	nsDragAndDrop.dragOver(oEvent, DenDZones_DragDropObserver);
+    nsDragAndDrop.dragOver(oEvent, DenDZones_DragDropObserver);
 }
 
 function DenDZones_DropZoneRMDrop(oEvent)
 {
-	nsDragAndDrop.drop(oEvent, DenDZones_DragDropRMItemObserver);
+    nsDragAndDrop.drop(oEvent, DenDZones_DragDropRMItemObserver);
 }
 
 function DenDZones_DropZoneRMDragOver(oEvent)
 {
-	nsDragAndDrop.dragOver(oEvent, DenDZones_DragDropRMItemObserver);
+    nsDragAndDrop.dragOver(oEvent, DenDZones_DragDropRMItemObserver);
 }
 
 function DenDZones_InitEngineManager()
 {
-	this.oDenDZones_Utils = new DenDUtils();
+    this.oDenDZones_Utils = new DenDUtils();
     this.gEngineView = (function () {
         if (typeof EngineView !== 'undefined' && typeof EngineStore !== 'undefined') {
             return new EngineView(new EngineStore());
@@ -234,18 +239,18 @@ function DenDZones_InitEngineManager()
 
     this.aCMItems = new Array();
 
-	DenDZones_InitPrefs();
-	DenDZones_InitDropZones(true);
-	DenDZones_InitSearchEngines();
-	DenDZones_InitCMItems();
-	DenDZones_InitDropZones(false);
+    DenDZones_InitPrefs();
+    DenDZones_InitDropZones(true);
+    DenDZones_InitSearchEngines();
+    DenDZones_InitCMItems();
+    DenDZones_InitDropZones(false);
 
-	document.getElementById("searchengines").addEventListener('dragover', DenDZones_DropZoneRMDragOver, false);
-	document.getElementById("searchengines").addEventListener('dragdrop', DenDZones_DropZoneRMDrop, false);
-	document.getElementById("cmitems").addEventListener('dragover', DenDZones_DropZoneRMDragOver, false);
-	document.getElementById("cmitems").addEventListener('dragdrop', DenDZones_DropZoneRMDrop, false);
-	document.getElementById("dropzonebox").addEventListener('dragover', DenDZones_DropZoneDragOver, false);
-	document.getElementById("dropzonebox").addEventListener('dragdrop', DenDZones_DropZoneDrop, false);
+    document.getElementById("searchengines").addEventListener('dragover', DenDZones_DropZoneRMDragOver, false);
+    document.getElementById("searchengines").addEventListener('dragdrop', DenDZones_DropZoneRMDrop, false);
+    document.getElementById("cmitems").addEventListener('dragover', DenDZones_DropZoneRMDragOver, false);
+    document.getElementById("cmitems").addEventListener('dragdrop', DenDZones_DropZoneRMDrop, false);
+    document.getElementById("dropzonebox").addEventListener('dragover', DenDZones_DropZoneDragOver, false);
+    document.getElementById("dropzonebox").addEventListener('dragdrop', DenDZones_DropZoneDrop, false);
 
     document.getElementById("dropzonebox").setAttribute("maxaxis", this.oDenDZones_Utils.GetInt("maxaxis"));
 
@@ -260,8 +265,8 @@ function DenDZones_DeInitEngineManager(bAndSave)
         DenDZones_SaveDropZones();
     }
 
-	var oObService = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
-	oObService.notifyObservers(opener, "dendzones-apply-settings", "OK");
+    var oObService = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
+    oObService.notifyObservers(opener, "dendzones-apply-settings", "OK");
     return 1;
 }
 
@@ -295,15 +300,15 @@ function DenDZones_SaveDropZones()
 
 function DenDZones_InitPrefs()
 {
-	this.oDenDZones_Color = document.getElementById('dropzonecolor');
+    this.oDenDZones_Color = document.getElementById('dropzonecolor');
 
-	if (this.oDenDZones_Color.mPicker) //Does not exist if you have Rainbowpicker installed. Not sure if this should be my problem, but my extension does not work otherwise...
-	{
-		//Add the Captain Caveman color...
-		this.oDenDZones_Color.mPicker.mBox.lastChild.lastChild.style.backgroundColor = "#6487DC";
-		this.oDenDZones_Color.mPicker.mBox.lastChild.lastChild.style.color = "#6487DC";
-		this.oDenDZones_Color.mPicker.mBox.lastChild.lastChild.setAttribute('color', '#6487DC');
-	}
+    if (this.oDenDZones_Color.mPicker) //Does not exist if you have Rainbowpicker installed. Not sure if this should be my problem, but my extension does not work otherwise...
+    {
+        //Add the Captain Caveman color...
+        this.oDenDZones_Color.mPicker.mBox.lastChild.lastChild.style.backgroundColor = "#6487DC";
+        this.oDenDZones_Color.mPicker.mBox.lastChild.lastChild.style.color = "#6487DC";
+        this.oDenDZones_Color.mPicker.mBox.lastChild.lastChild.setAttribute('color', '#6487DC');
+    }
 }
 
 function DenDZones_InitSearchEngines()
@@ -317,7 +322,9 @@ function DenDZones_InitSearchEngines()
     {
         oItem = oList.appendItem(oEngine.name, oEngine.name);
         oItem.value = oEngine.name;
-        oItem.addEventListener("draggesture", function(event) {nsDragAndDrop.startDrag(event, DDSSIO);});
+        oItem.addEventListener("draggesture", function(event) {
+            nsDragAndDrop.startDrag(event, DDSSIO);
+        });
         oItem.setAttribute("tooltiptext", oEngine.description);
         oItem.setAttribute("class", "listitem-iconic");
         sExtraStyle = "";
@@ -471,58 +478,58 @@ function DenDZones_DisplayCMItems()
 
 function DenDZones_SortCMItems(a1, a2)
 {
-	if (a1[1] < a2[1]) return -1;
-	return 1;
+    if (a1[1] < a2[1]) return -1;
+    return 1;
 }
 
 function DenDZones_InitDropZones(bDataOnly)
 {
-	this.aDenDZones_DropZones = null;
-	this.aDenDZones_DropZones = this.oDenDZones_Utils.GetDropZones();
+    this.aDenDZones_DropZones = null;
+    this.aDenDZones_DropZones = this.oDenDZones_Utils.GetDropZones();
 
-	if (!bDataOnly) setTimeout(function() {DenDZones_InitDropZonesUI();}, 100);
+    if (!bDataOnly) setTimeout(function() {DenDZones_InitDropZonesUI();}, 100);
 }
 
 function DenDZones_InitDropZonesUI()
 {
-	var oDZ;
-	var oItem;
-	var sID, sLabel, sFavIcon;
-	var iFSEIndex, iIndex, iLen = this.aDenDZones_DropZones.length;
-	var iX, iY;
+    var oDZ;
+    var oItem;
+    var sID, sLabel, sFavIcon;
+    var iFSEIndex, iIndex, iLen = this.aDenDZones_DropZones.length;
+    var iX, iY;
 
-	for (iX = 0; iX < 10; iX ++)
-	{
-		for (iY = 0; iY < 10; iY ++)
-		{
+    for (iX = 0; iX < 10; iX ++)
+    {
+        for (iY = 0; iY < 10; iY ++)
+        {
             if (this.aDenDZones_DropZones[iX][iY][0] == "")
             {
-			    oDZ = document.getElementById('dz_' + iX + '_' + iY);
-			    oDZ.setAttribute('dendid', '');
+                oDZ = document.getElementById('dz_' + iX + '_' + iY);
+                oDZ.setAttribute('dendid', '');
                 oDZ.setAttribute('dendlabel', '');
                 oDZ.setAttribute('dendcommand', '');
-			    oDZ.setAttribute('selected', false);
+                oDZ.setAttribute('selected', false);
                 oDZ.addEventListener('click', function() {DenDZones_SetColor(this);});
                 oDZ.firstChild.setAttribute('tooltiptext', '');
-			    oDZ.firstChild.setAttribute('src', '');
+                oDZ.firstChild.setAttribute('src', '');
                 oDZ.style.backgroundColor = "";
             }
             else
             {
-		        oDZ = document.getElementById('dz_' + iX + '_' + iY);
-		        oItem = DenDZones_GetListboxItemByValue(this.aDenDZones_DropZones[iX][iY][0]);
-		        if (oItem)
-		        {
-			        oDZ.setAttribute('dendid', oItem.value);
+                oDZ = document.getElementById('dz_' + iX + '_' + iY);
+                oItem = DenDZones_GetListboxItemByValue(this.aDenDZones_DropZones[iX][iY][0]);
+                if (oItem)
+                {
+                    oDZ.setAttribute('dendid', oItem.value);
                     oDZ.setAttribute('dendlabel', oItem.label);
                     oDZ.setAttribute('dendcommand', oItem.getAttribute('dendcommand'));
-			        oDZ.setAttribute('tooltiptext', oItem.getAttribute('tooltiptext'));
-			        oDZ.setAttribute('selected', true);
+                    oDZ.setAttribute('tooltiptext', oItem.getAttribute('tooltiptext'));
+                    oDZ.setAttribute('selected', true);
                     oDZ.addEventListener('click', function() {DenDZones_SetColor(this);});
-			        oDZ.firstChild.setAttribute('tooltiptext', oItem.getAttribute('tooltiptext'));
-			        oDZ.firstChild.setAttribute('src', oItem.getAttribute('icon'));
+                    oDZ.firstChild.setAttribute('tooltiptext', oItem.getAttribute('tooltiptext'));
+                    oDZ.firstChild.setAttribute('src', oItem.getAttribute('icon'));
                     oDZ.style.backgroundColor = this.aDenDZones_DropZones[iX][iY][4];
-		        }
+                }
                 else
                 {
                     oDZ.setAttribute('dendid', this.aDenDZones_DropZones[iX][iY][0]);
@@ -536,8 +543,8 @@ function DenDZones_InitDropZonesUI()
                     oDZ.style.backgroundColor = this.aDenDZones_DropZones[iX][iY][4]
                 }
             }
-		}
-	}
+        }
+    }
 }
 
 function DenDZones_GetListboxItemByValue(sValue)
@@ -604,75 +611,75 @@ function DenDZones_SetColor(oDZ)
 
 function DenDZones_DragSwitchDropZone(sSourceID, sTargetID)
 {
-	var oSource = document.getElementById(sSourceID);
-	var oTarget = document.getElementById(sTargetID);
+    var oSource = document.getElementById(sSourceID);
+    var oTarget = document.getElementById(sTargetID);
 
-	if (oSource && oTarget && sSourceID != sTargetID)
-	{
-		var sSID = oSource.getAttribute('dendid');
-		var sSLabel = oSource.getAttribute('dendlabel');
-		var sSCommand = oSource.getAttribute('dendcommand');
-		var sSTooltiptext = oSource.getAttribute('tooltiptext');
-		var sSSRC = oSource.firstChild.getAttribute('src');
-		var sSSelected = oSource.getAttribute('selected');
-		var sSColor = oSource.style.backgroundColor;
+    if (oSource && oTarget && sSourceID != sTargetID)
+    {
+        var sSID = oSource.getAttribute('dendid');
+        var sSLabel = oSource.getAttribute('dendlabel');
+        var sSCommand = oSource.getAttribute('dendcommand');
+        var sSTooltiptext = oSource.getAttribute('tooltiptext');
+        var sSSRC = oSource.firstChild.getAttribute('src');
+        var sSSelected = oSource.getAttribute('selected');
+        var sSColor = oSource.style.backgroundColor;
 
-		var sTID = oTarget.getAttribute('dendid');
-		var sTLabel = oTarget.getAttribute('dendlabel');
-		var sTCommand = oTarget.getAttribute('dendcommand');
-		var sTTooltiptext = oTarget.getAttribute('tooltiptext');
-		var sTSRC = oTarget.firstChild.getAttribute('src');
-		var sTSelected = oTarget.getAttribute('selected');
-		var sTColor = oTarget.style.backgroundColor;
+        var sTID = oTarget.getAttribute('dendid');
+        var sTLabel = oTarget.getAttribute('dendlabel');
+        var sTCommand = oTarget.getAttribute('dendcommand');
+        var sTTooltiptext = oTarget.getAttribute('tooltiptext');
+        var sTSRC = oTarget.firstChild.getAttribute('src');
+        var sTSelected = oTarget.getAttribute('selected');
+        var sTColor = oTarget.style.backgroundColor;
 
         if (sTargetID != "dropzonebox")
         {
-    		oSource.setAttribute('dendid', sTID);
-    		oSource.setAttribute('dendlabel', sTLabel);
-    		oSource.setAttribute('dendcommand', sTCommand);
-    		oSource.setAttribute('tooltiptext', sTTooltiptext);
-    		oSource.setAttribute('selected', sTSelected);
-    		oSource.firstChild.setAttribute('tooltiptext', sTTooltiptext);
-    		oSource.firstChild.setAttribute('src', sTSRC);
+            oSource.setAttribute('dendid', sTID);
+            oSource.setAttribute('dendlabel', sTLabel);
+            oSource.setAttribute('dendcommand', sTCommand);
+            oSource.setAttribute('tooltiptext', sTTooltiptext);
+            oSource.setAttribute('selected', sTSelected);
+            oSource.firstChild.setAttribute('tooltiptext', sTTooltiptext);
+            oSource.firstChild.setAttribute('src', sTSRC);
             oSource.style.backgroundColor = sTColor;
 
-    		oTarget.setAttribute('dendid', sSID);
-    		oTarget.setAttribute('dendlabel', sSLabel);
-    		oTarget.setAttribute('dendcommand', sSCommand);
-    		oTarget.setAttribute('tooltiptext', sSTooltiptext);
-    		oTarget.setAttribute('selected', sSSelected);
-    		oTarget.firstChild.setAttribute('tooltiptext', sSTooltiptext);
-    		oTarget.firstChild.setAttribute('src', sSSRC);
+            oTarget.setAttribute('dendid', sSID);
+            oTarget.setAttribute('dendlabel', sSLabel);
+            oTarget.setAttribute('dendcommand', sSCommand);
+            oTarget.setAttribute('tooltiptext', sSTooltiptext);
+            oTarget.setAttribute('selected', sSSelected);
+            oTarget.firstChild.setAttribute('tooltiptext', sSTooltiptext);
+            oTarget.firstChild.setAttribute('src', sSSRC);
             oTarget.style.backgroundColor = sSColor;
         }
         else
         {
-    		oSource.setAttribute('dendid', '');
-    		oSource.setAttribute('dendlabel', '');
-    		oSource.setAttribute('dendcommand', '');
-    		oSource.setAttribute('tooltiptext', '');
-    		oSource.setAttribute('selected', false);
-    		oSource.firstChild.setAttribute('tooltiptext', '');
-    		oSource.firstChild.setAttribute('src', '');
+            oSource.setAttribute('dendid', '');
+            oSource.setAttribute('dendlabel', '');
+            oSource.setAttribute('dendcommand', '');
+            oSource.setAttribute('tooltiptext', '');
+            oSource.setAttribute('selected', false);
+            oSource.firstChild.setAttribute('tooltiptext', '');
+            oSource.firstChild.setAttribute('src', '');
             oSource.style.backgroundColor = "";
         }
-	}
+    }
 }
 
 function DenDZones_DragRemoveDropZone(sSourceID)
 {
-	var oSource = document.getElementById(sSourceID);
-	if (oSource)
-	{
-		oSource.setAttribute('dendid', '');
-		oSource.setAttribute('dendlabel', '');
-		oSource.setAttribute('dendcommand', '');
-		oSource.setAttribute('tooltiptext', '');
-		oSource.setAttribute('selected', false);
-		oSource.firstChild.setAttribute('tooltiptext', '');
-		oSource.firstChild.setAttribute('src', '');
+    var oSource = document.getElementById(sSourceID);
+    if (oSource)
+    {
+        oSource.setAttribute('dendid', '');
+        oSource.setAttribute('dendlabel', '');
+        oSource.setAttribute('dendcommand', '');
+        oSource.setAttribute('tooltiptext', '');
+        oSource.setAttribute('selected', false);
+        oSource.firstChild.setAttribute('tooltiptext', '');
+        oSource.firstChild.setAttribute('src', '');
         oSource.style.backgroundColor = "";
-	}
+    }
 }
 
 function ValidateOpacity(oPreference)
@@ -688,12 +695,12 @@ function UpdateDZMaxAxis(oPreference)
 
 function HasDropZone(sID)
 {
-	var iX, iY;
+    var iX, iY;
 
-	for (iX = 0; iX < 10; iX ++)
-	{
-		for (iY = 0; iY < 10; iY ++)
-		{
+    for (iX = 0; iX < 10; iX ++)
+    {
+        for (iY = 0; iY < 10; iY ++)
+        {
             if (this.aDenDZones_DropZones[iX][iY][0] == sID) return true;
         }
     }

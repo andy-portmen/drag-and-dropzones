@@ -308,7 +308,7 @@ var DenDZonesShell =
             }
 
             var bHandled = false;
-            if (DenDZonesShell.DenDZones_DragDropDZSearch(sData, evt.clientX, evt.clientY, evt.target.id, session.sourceNode))
+            if (DenDZonesShell.DenDZones_DragDropDZSearch(sData, evt.clientX, evt.clientY, evt.target.id, session.sourceNode, null, evt))
             {
                 session.canDrop = true;
                 bHandled = true;
@@ -443,7 +443,7 @@ var DenDZonesShell =
 
     DenDZones_NoDragDenDSearch: function(oEvent)
     {
-        DenDZonesShell.DenDZones_DragDropDZSearch(DenDZonesShell.oMouseObject.sHoverText, oEvent.clientX, oEvent.clientY, oEvent.target.id, DenDZonesShell.oMouseObject.oNode, DenDZonesShell.oMouseObject);
+        DenDZonesShell.DenDZones_DragDropDZSearch(DenDZonesShell.oMouseObject.sHoverText, oEvent.clientX, oEvent.clientY, oEvent.target.id, DenDZonesShell.oMouseObject.oNode, DenDZonesShell.oMouseObject, oEvent);
 
         DenDZonesShell.DenDZones_UpdateDropZones('destroy');
         DenDZonesShell.SetDragInitialized(false);
@@ -791,7 +791,7 @@ var DenDZonesShell =
         if (this.aDenDZones_FadeOutDropZones) DenDZonesShell.DenDZones_DropZoneFadeOut();
     },
 
-    DenDZones_DragDropDZSearch: function(sText, iMouseX, iMouseY, sTargetID, oSourceNode, oMouseObject)
+    DenDZones_DragDropDZSearch: function(sText, iMouseX, iMouseY, sTargetID, oSourceNode, oMouseObject, aEvent)
     {
         if (!this.GetDragInitialized()) return false;
 
@@ -851,13 +851,27 @@ var DenDZonesShell =
                 document.popupNode = oSourceNode;
 
                 gContextMenu = new nsContextMenu(document.getElementById("contentAreaContextMenu"), window.getBrowser())
+                gContextMenuContentData = {
+                  isRemote: false,
+                  event: aEvent,
+                  popupNode: oSourceNode,
+                  browser: window.getBrowser(),
+                  addonInfo: null,
+                  documentURIObject: document.documentURIObject,
+                  docLocation: document.location.href,
+                  charSet: document.characterSet,
+                  referrer: document.referrer,
+                  referrerPolicy: document.referrerPolicy,
+                  contentType: null,
+                  contentDisposition: '',
+                };
+
                 if (oSourceNode && oSourceNode.childNodes.length == 1 && oSourceNode.firstChild && oSourceNode.firstChild.nodeName == "IMG")
                 {
                     gContextMenu.onLoadedImage = true;
                     gContextMenu.onImage = true;
                     gContextMenu.mediaURL = oSourceNode.firstChild.src;
                 }
-
                 if (oItem)
                 {
                     try
