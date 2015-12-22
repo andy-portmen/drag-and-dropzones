@@ -1,0 +1,20 @@
+<!ENTITY dendzones.settings.title "Drag &amp; DropZones 设置">
+<!ENTITY dendzones.settings.general "Drag &amp; DropZones">
+<!ENTITY dendzones.settings.dropzones "拖放区设置">
+<!ENTITY dendzones.settings.misc "各项设置">
+<!ENTITY dendzones.settings.defaultcolor "拖放区颜色（单击色块来设置）">
+<!ENTITY dendzones.toolbar.toggledend "Drag &amp; DropZones">
+<!ENTITY dendzones.toolbar.toggledend.tooltip "开/关 Drag &amp; DropZones">
+<!ENTITY dendzones.settings.searchengines "搜索引擎">
+<!ENTITY dendzones.settings.cmitems "右键菜单动作">
+<!ENTITY dendzones.settings.other.switchcurrentengine "搜索时切换当前搜索引擎">
+<!ENTITY dendzones.settings.other.dropzoneshowdelay "延迟显示拖放区（毫秒）">
+<!ENTITY dendzones.settings.other.opacity "拖放区的透明度 (内容/标题/高亮)">
+<!ENTITY dendzones.settings.other.maxaxis "网格大小">
+<!ENTITY dendzones.settings.other.maxaxis.auto "自动">
+<!ENTITY dendzones.settings.other.usefortext "拖动文本时显示">
+<!ENTITY dendzones.settings.other.useforimages "拖动图片时显示">
+<!ENTITY dendzones.settings.other.useforlinks "拖动链接时显示">
+<!ENTITY dendzones.settings.search.openintab "在新的标签页打开搜索结果">
+<!ENTITY dendzones.settings.search.activatetab "激活搜索打开的新标签页">
+<!ENTITY dendzones.settings.other.handlecontextclick "使用 Drag &amp; DropZones 代替右键菜单">
