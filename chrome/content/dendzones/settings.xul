@@ -13,7 +13,7 @@
         onload="DenDZones_InitEngineManager();"
         onunload="return DenDZones_DeInitEngineManager(false);"
         buttons="accept,cancel"
-        persist="screenX screenY" 
+        persist="screenX screenY"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" xmlns:html="http://www.w3.org/1999/xhtml">
 
 <prefpane id="pp_general" label="&dendzones.settings.general;" flex="1">
@@ -44,13 +44,13 @@
                     <tabpanel>
                         <vbox flex="1">
                             <listbox id="searchengines" flex="1">
-                            </listbox>                
+                            </listbox>
                         </vbox>
                     </tabpanel>
                     <tabpanel>
                         <vbox flex="1">
                             <listbox id="cmitems" flex="1">
-                            </listbox>                
+                            </listbox>
                         </vbox>
                     </tabpanel>
                 </tabpanels>
@@ -71,7 +71,7 @@
                     <hbox><hbox id="dz_0_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_1_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_2_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_3_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_4_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_5_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_6_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_7_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_8_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_9_8" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox></hbox>
                     <hbox><hbox id="dz_0_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_1_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_2_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_3_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_4_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_5_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_6_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_7_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_8_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox><hbox id="dz_9_9" class="dz" ondraggesture="nsDragAndDrop.startDrag(event, DDIO);"><image src=""/></hbox></hbox>
                 </vbox>
-            </groupbox>        
+            </groupbox>
 
             <groupbox>
                 <caption label="&dendzones.settings.misc;"/>
@@ -80,7 +80,7 @@
                     <label value="&dendzones.settings.defaultcolor;" style="padding-top: 8px"/>
                     <colorpicker id="dropzonecolor" preference="pref_dropzonecolor" palettename="standard" type="button"/>
                 </hbox>
-                
+
                 <hbox>
                     <label value="&dendzones.settings.other.maxaxis;" style="padding-top: 8px"/>
                     <menulist preference="pref_maxaxis">
@@ -93,12 +93,12 @@
                         </menupopup>
                     </menulist>
                 </hbox>
-                
+
                 <hbox>
                     <label value="&dendzones.settings.other.dropzoneshowdelay;" style="text-align: right; margin-top: 5px"/>
                     <textbox preference="pref_dropzoneshowdelay" style="max-width: 50px;"/>
                 </hbox>
-                
+
                 <hbox>
                     <label value="&dendzones.settings.other.opacity;" style="text-align: right; margin-top: 5px"/>
                     <hbox flex="1"/>
@@ -115,7 +115,7 @@
                 <checkbox preference="pref_useforimages" label="&dendzones.settings.other.useforimages;"/>
                 <checkbox preference="pref_useforlinks" label="&dendzones.settings.other.useforlinks;"/>
                 <checkbox preference="pref_handlecontextclick" label="&dendzones.settings.other.handlecontextclick;"/>
-            </groupbox>        
+            </groupbox>
         </vbox>
     </hbox>
 </prefpane>
@@ -123,7 +123,7 @@
 <script type="application/x-javascript" src="chrome://browser/content/search/engineManager.js"/>
 <script type="application/x-javascript" src="chrome://dendzones/content/utils.js"/>
 <script type="application/x-javascript" src="chrome://global/content/nsDragAndDrop.js"/>
-<script type="application/x-javascript" src="chrome://global/content/nsTransferable.js"/> 
+<script type="application/x-javascript" src="chrome://global/content/nsTransferable.js"/>
 <script type="application/x-javascript" src="chrome://dendzones/content/settings.js"/>
 
 </prefwindow>

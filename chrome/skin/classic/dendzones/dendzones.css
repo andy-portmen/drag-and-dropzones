@@ -1,10 +1,27 @@
 #dropzonecolor {margin-top: 5px; min-height: 24px; max-height: 24px;}
 
 #dendzones-window #dropzonebox {margin: 5px;}
-.dz {opacity:0.6; border: solid 1px rgb(124,124,124); width: 45px; height: 20px;}
-.dz[dragstate="1"], .dz:hover {opacity:0.8;}
-.dz[dragstate="2"] {opacity:1.0;}
-.dz image {max-width: 45px; padding: 1px 13px 1px 13px;}
+.dz {
+  border: solid 1px #b4b4b4;
+  width: 55px;
+  max-width: 55px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -1px -1px 0;
+}
+.dz[dragstate="1"], .dz:hover {
+  border-color: rgb(80,80,80);
+}
+.dz[dragstate="2"] {
+  border-color: rgb(40,40,40);
+}
+.dz image {
+  max-width: auto;
+  max-height: 20px;
+  object-fit: scale-down;
+}
 
 #dendzones-window #dropzonebox[maxaxis="4"] #dz_4_0 {border-left: 2px dashed red;}
 #dendzones-window #dropzonebox[maxaxis="4"] #dz_4_1 {border-left: 2px dashed red;}
