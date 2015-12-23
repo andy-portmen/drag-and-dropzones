@@ -37,8 +37,8 @@
         <vbox id="sourcelists" flex="1">
             <tabbox id="tabbox_sourcelists" flex="1">
                 <tabs>
-                    <tab label="&dendzones.settings.searchengines;" flex="1"/>
-                    <tab label="&dendzones.settings.cmitems;" flex="1"/>
+                    <tab label="&dendzones.settings.searchengines;"/>
+                    <tab label="&dendzones.settings.cmitems;"/>
                 </tabs>
                 <tabpanels flex="1">
                     <tabpanel>
