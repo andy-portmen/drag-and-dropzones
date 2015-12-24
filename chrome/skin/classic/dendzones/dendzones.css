@@ -5,21 +5,22 @@
   border: solid 1px #b4b4b4;
   width: 55px;
   max-width: 55px;
-  height: 30px;
+  height: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 -1px -1px 0;
+  opacity: 0.6;
 }
 .dz[dragstate="1"], .dz:hover {
-  border-color: rgb(80,80,80);
+  opacity: 0.8;
 }
-.dz[dragstate="2"] {
-  border-color: rgb(40,40,40);
+.dz[dragstate="2"], .dz:active{
+  opacity: 1;
 }
 .dz image {
   max-width: auto;
-  max-height: 20px;
+  max-height: 21px;
   object-fit: scale-down;
 }
 
