@@ -53,16 +53,13 @@ var   DDSSIO =
     onDragStart: function (evt,transferData,action)
     {
         var oListbox = evt.target.parentNode;
-        console.error(oListbox.nodeName);
         if (!oListbox || oListbox.nodeName != "listbox") return;
 
         var iSelectedIndex = oListbox.selectedIndex;
-        console.error(iSelectedIndex);
         if (iSelectedIndex == -1) return;
 
         transferData.data = new TransferData();
         transferData.data.addDataForFlavour(ENGINE_FLAVOR, "ss_" + iSelectedIndex.toString());
-        console.error(ENGINE_FLAVOR, "ss_" + iSelectedIndex.toString());
     }
 };
 

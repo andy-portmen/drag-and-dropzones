@@ -850,7 +850,6 @@ var DenDZonesShell =
                 //You will get an automated warning on this line from AMO but we need to set the node as if we right clicked on it. Otherwise the action "might" not work.
                 document.popupNode = oSourceNode;
 
-                gContextMenu = new nsContextMenu(document.getElementById("contentAreaContextMenu"), window.getBrowser())
                 gContextMenuContentData = {
                   isRemote: false,
                   event: aEvent,
@@ -865,7 +864,7 @@ var DenDZonesShell =
                   contentType: null,
                   contentDisposition: '',
                 };
-
+                gContextMenu = new nsContextMenu(document.getElementById("contentAreaContextMenu"), window.getBrowser())
                 if (oSourceNode && oSourceNode.childNodes.length == 1 && oSourceNode.firstChild && oSourceNode.firstChild.nodeName == "IMG")
                 {
                     gContextMenu.onLoadedImage = true;
@@ -919,6 +918,7 @@ var DenDZonesShell =
             }
             catch (e)
             {
+                console.error(e)
                 /*Command is probably not supported in the current context*/
                 this.oDenDZones_Utils.WriteDebugMessage("Drag & DropZones Debug\nCommand [" + this.aDenDZones_DropZones[iHighlightX][iHighlightY][1] + "] (" + sID + ") not supported\nError: " + e);
                 return false;
