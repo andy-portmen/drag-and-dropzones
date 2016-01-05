@@ -18,3 +18,4 @@
 <!ENTITY dendzones.settings.search.openintab "فتح نتيجة البحث فى شريط جديد">
 <!ENTITY dendzones.settings.search.activatetab "تفعيل الشريط الجديدى المفتوح من نتيجة البحث">
 <!ENTITY dendzones.settings.other.handlecontextclick "استخدم منطقة السحب و الإلقاء بديلآ عن القائمة المنسدلة">
+<!ENTITY dendzones.settings.other.cancelondropoutsidezone "Cancel drop when dropping on empty zones">

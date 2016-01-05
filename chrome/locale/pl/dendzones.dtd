@@ -18,3 +18,4 @@
 <!ENTITY dendzones.settings.search.openintab "Otwórz wyniki wyszukiwania w nowej zakładce">
 <!ENTITY dendzones.settings.search.activatetab "Aktywuj nową zakładkę otwartą podczas wyszukiwania">
 <!ENTITY dendzones.settings.other.handlecontextclick "Użyj Drag &amp; DropZones zamiast menu kontekstowego">
+<!ENTITY dendzones.settings.other.cancelondropoutsidezone "Cancel drop when dropping on empty zones">

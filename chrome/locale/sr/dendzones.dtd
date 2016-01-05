@@ -18,3 +18,4 @@
 <!ENTITY dendzones.settings.search.openintab "Резултате отварај у новим језичцима">
 <!ENTITY dendzones.settings.search.activatetab "Активирај нови језичак отворен из претраге">
 <!ENTITY dendzones.settings.other.handlecontextclick "Користи ДропЗоне уместо садржајног менија">
+<!ENTITY dendzones.settings.other.cancelondropoutsidezone "Cancel drop when dropping on empty zones">

@@ -18,3 +18,4 @@
 <!ENTITY dendzones.settings.search.openintab "Keresési eredmények megnyitása új lapon">
 <!ENTITY dendzones.settings.search.activatetab "Keresési eredmények megnyitásakor kerüljön váltás (fókusz) az új lapra">
 <!ENTITY dendzones.settings.other.handlecontextclick "Drag &amp; DropZones használata a helyi menü helyett">
+<!ENTITY dendzones.settings.other.cancelondropoutsidezone "Cancel drop when dropping on empty zones">

@@ -18,3 +18,4 @@
 <!ENTITY dendzones.settings.search.openintab "在新的标签页打开搜索结果">
 <!ENTITY dendzones.settings.search.activatetab "激活搜索打开的新标签页">
 <!ENTITY dendzones.settings.other.handlecontextclick "使用 Drag &amp; DropZones 代替右键菜单">
+<!ENTITY dendzones.settings.other.cancelondropoutsidezone "Cancel drop when dropping on empty zones">

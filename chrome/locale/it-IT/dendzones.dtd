@@ -18,3 +18,4 @@
 <!ENTITY dendzones.settings.search.openintab "Apri i risultati di ricerca in una nuova scheda">
 <!ENTITY dendzones.settings.search.activatetab "Porta in primo piano le schede dei risultati di ricerca">
 <!ENTITY dendzones.settings.other.handlecontextclick "Attiva le zone di trascinamento e rilascio con clic con tasto destro del mouse">
+<!ENTITY dendzones.settings.other.cancelondropoutsidezone "Cancel drop when dropping on empty zones">

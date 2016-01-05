@@ -18,3 +18,4 @@
 <!ENTITY dendzones.settings.search.openintab "Otvoriť výsledky vyhľadávania v novej záložke">
 <!ENTITY dendzones.settings.search.activatetab "Aktivovať otvorenie novej záložky z vyhľadavania">
 <!ENTITY dendzones.settings.other.handlecontextclick "Umiestniť Drag &amp; DropZones v kontextovom menu">
+<!ENTITY dendzones.settings.other.cancelondropoutsidezone "Cancel drop when dropping on empty zones">
