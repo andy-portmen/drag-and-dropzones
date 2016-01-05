@@ -586,6 +586,15 @@ var DenDZonesShell =
         if (!DenDZonesShell.DenDZones_CheckDZHandlesThisDrop(oEvent))
         {
             DenDZonesShell.DenDZones_UpdateDropZones('destroy');
+
+            //Dropped outside of a dropzone, check if we should cancel the event
+            if (DenDZonesShell.oDenDZones_Utils.GetBool("cancelondropoutsidezone"))
+            {
+                oEvent.stopPropagation();
+                oEvent.preventDefault();
+
+                return;
+            }
         }
         var iResult = DenDZonesShell.DenDZones_HandleThisDenDOperation(oEvent, nsDragAndDrop.mDragSession, sDropData);
         if (iResult == 1 || iResult == 2 || iResult == 3)

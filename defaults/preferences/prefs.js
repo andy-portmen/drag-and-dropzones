@@ -15,3 +15,4 @@ pref("extensions.dendzones.handlecontextclick", false);
 pref("extensions.dendzones.maxaxis", 0);
 pref("extensions.dendzones.activateonctrlshiftclick", true);
 pref("extensions.dendzones.version", "");
+pref("extensions.dendzones.cancelondropoutsidezone", false);

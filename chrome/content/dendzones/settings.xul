@@ -31,6 +31,7 @@
         <preference id="pref_openintab" name="extensions.dendzones.search.openintab" type="bool"/>
         <preference id="pref_activatetab" name="extensions.dendzones.search.activatetab" type="bool"/>
         <preference id="pref_handlecontextclick" name="extensions.dendzones.handlecontextclick" type="bool"/>
+        <preference id="pref_cancelondropoutsidezone" name="extensions.dendzones.cancelondropoutsidezone" type="bool"/>
     </preferences>
 
     <hbox flex="1">
@@ -115,6 +116,7 @@
                 <checkbox preference="pref_useforimages" label="&dendzones.settings.other.useforimages;"/>
                 <checkbox preference="pref_useforlinks" label="&dendzones.settings.other.useforlinks;"/>
                 <checkbox preference="pref_handlecontextclick" label="&dendzones.settings.other.handlecontextclick;"/>
+                <checkbox preference="pref_cancelondropoutsidezone" label="&dendzones.settings.other.cancelondropoutsidezone;"/>
             </groupbox>
         </vbox>
     </hbox>

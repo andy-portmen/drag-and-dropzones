@@ -18,3 +18,4 @@
 <!ENTITY dendzones.settings.search.openintab "Zoekresultaten in een nieuw tabblad openen">
 <!ENTITY dendzones.settings.search.activatetab "Een nieuw tabblad geopend vanuit een zoekopdracht activeren">
 <!ENTITY dendzones.settings.other.handlecontextclick "Drag &amp; DropZones gebruiken in plaats van het contextmenu">
+<!ENTITY dendzones.settings.other.cancelondropoutsidezone "Annuleer de actie bij het slepen naar een lege dropzone">
