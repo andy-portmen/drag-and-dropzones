@@ -132,7 +132,7 @@ var DenDZonesShell =
         var oIOService = Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService);
         var sStyle = "";
 
-        sStyle += ".dropzone {background: transparent !important; border: 1px solid rgba(62,79,119,.8) !important; position: absolute !important; font: 10pt verdana !important; z-index: 2001 !important;} ";
+        sStyle += ".dropzone {background: transparent !important; border: 1px solid rgba(62,79,119,.8) !important; position: absolute !important; font: 10pt verdana !important; z-index: 2147483647 !important;} ";
         sStyle += ".dropzone img {margin-top: 3px !important; vertical-align: middle !important; padding-left: 3px !important; padding-right: 3px !important; max-height: 16px !important; max-width: 16px !important; border: none !important;} ";
 
         var oURI = oIOService.newURI("data:text/css," + sStyle, null, null);
