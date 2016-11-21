@@ -3,9 +3,9 @@
 
  <Description about="urn:mozilla:install-manifest">
 
-   <em:id>drag.drop.zone@quick.dirty</em:id>
-   <em:name>Drag &amp; DropZones - Quick &amp; dirty</em:name>
-   <em:version>1.6.9.a</em:version>
+   <em:id>dendzones@captaincaveman.nl</em:id>
+   <em:name>Drag &amp; DropZones</em:name>
+   <em:version>1.7.0</em:version>
    <em:description>Replace the contact menu with fancy Drag &amp; DropZones</em:description>
    <em:creator>Martijn Kooij</em:creator>
    <em:contributor>Andy Portmen</em:contributor>
@@ -49,7 +49,7 @@
      <Description>
      <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
      <em:minVersion>4.0</em:minVersion>
-     <em:maxVersion>*</em:maxVersion>
+     <em:maxVersion>32.0</em:maxVersion>
      </Description>
    </em:targetApplication>
 

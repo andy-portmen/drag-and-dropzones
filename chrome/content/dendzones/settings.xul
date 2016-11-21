@@ -124,7 +124,7 @@
 
 <script type="application/x-javascript" src="chrome://browser/content/search/engineManager.js"/>
 <script type="application/x-javascript" src="chrome://dendzones/content/utils.js"/>
-<script type="application/x-javascript" src="chrome://global/content/nsDragAndDrop.js"/>
+<script type="application/x-javascript" src="chrome://dendzones/content/nsDragAndDrop.js"/>
 <script type="application/x-javascript" src="chrome://global/content/nsTransferable.js"/>
 <script type="application/x-javascript" src="chrome://dendzones/content/settings.js"/>
 
