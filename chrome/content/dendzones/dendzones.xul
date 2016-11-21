@@ -4,7 +4,7 @@
 <overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <script type="application/x-javascript" src="chrome://dendzones/content/dendzones.js"/>
 <script type="application/x-javascript" src="chrome://dendzones/content/utils.js"/>
-<script type="application/x-javascript" src="chrome://global/content/nsDragAndDrop.js"/>
+<script type="application/x-javascript" src="chrome://dendzones/content/nsDragAndDrop.js"/>
 <script type="application/x-javascript" src="chrome://global/content/nsTransferable.js"/> 
 
 <toolbarpalette id="BrowserToolbarPalette">
